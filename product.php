@@ -1,4 +1,6 @@
 <?php
+
+session_start();
 // Get the product ID from URL query string
 $productId = $_GET['id'] ?? null;
 
@@ -95,9 +97,18 @@ if (!$product) {
         </div>
 
         <!-- Add to Cart -->
-        <button class="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition mb-4">
-          Add to Cart
-        </button>
+        <form method="post" action="cart.php">
+  <input type="hidden" name="id" value="<?php echo $productId; ?>">
+  <input type="hidden" name="name" value="<?php echo $product['name']; ?>">
+  <input type="hidden" name="price" value="<?php echo $product['price']; ?>">
+  <input type="number" name="quantity" value="1" min="1" 
+         class="border px-2 py-1 w-16 rounded mb-4">
+
+  <button type="submit" name="add_to_cart" 
+          class="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition">
+    Add to Cart
+  </button>
+</form>
 
         <!-- Extra Info -->
         <ul class="text-sm text-gray-600 space-y-2">
