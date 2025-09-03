@@ -30,6 +30,36 @@ $products = [
         'image' => 'https://shrigangaherbal.com/assets/p_img62-D0zloGw6.png',
         'description' => 'Pure Shilajit paste for energy and vitality.'
     ],
+    5 => [
+        'name' => 'Kailash Jeevan MultiPurpose Cream',
+        'price' => 200,
+        'image' => 'https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png',
+        'description' => 'Pure Shilajit paste for energy and vitality.'
+    ],
+    6 => [
+        'name' => 'Kesri Marham',
+        'price' => 200,
+        'image' => 'https://shrigangaherbal.com/assets/p_img65-jtLWbZUI.png',
+        'description' => 'Pure Shilajit paste for energy and vitality.'
+    ],
+    7 => [
+        'name' => 'Herbal Product',
+        'price' => 200,
+        'image' => 'https://shrigangaherbal.com/assets/p_img55-BB5qRI_o.png',
+        'description' => 'Pure Shilajit paste for energy and vitality.'
+    ],
+    8 => [
+        'name' => 'Herbal Product',
+        'price' => 200,
+        'image' => 'https://shrigangaherbal.com/assets/p_img56-BXkPPiBF.png',
+        'description' => 'Pure Shilajit paste for energy and vitality.'
+    ],
+    9 => [
+        'name' => 'Herbal Product',
+        'price' => 200,
+        'image' => 'https://shrigangaherbal.com/assets/p_img54-B2o6kMBP.png',
+        'description' => 'Pure Shilajit paste for energy and vitality.'
+    ],
 ];
 
 // Check if product exists
@@ -97,10 +127,16 @@ if (!$product) {
         </div>
 
         <!-- Add to Cart -->
-        <form method="post" action="cart.php">
+<form method="post" action="cart.php">
   <input type="hidden" name="id" value="<?php echo $productId; ?>">
   <input type="hidden" name="name" value="<?php echo $product['name']; ?>">
   <input type="hidden" name="price" value="<?php echo $product['price']; ?>">
+  <input type="hidden" name="image" value="<?php echo $product['image']; ?>">
+  
+  <!-- Default weight, you can make this dynamic -->
+  <input type="hidden" name="weight" value="23g">
+
+  <!-- Quantity -->
   <input type="number" name="quantity" value="1" min="1" 
          class="border px-2 py-1 w-16 rounded mb-4">
 
@@ -109,6 +145,7 @@ if (!$product) {
     Add to Cart
   </button>
 </form>
+
 
         <!-- Extra Info -->
         <ul class="text-sm text-gray-600 space-y-2">

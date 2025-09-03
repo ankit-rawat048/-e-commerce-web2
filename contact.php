@@ -26,7 +26,7 @@
     <section class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 rounded-lg shadow-lg">
       
       <!-- Image -->
-      <img src="https://shrigangaherbal.com/assets/contact_img-CyOum2vk.png" alt="contact image" class="w-full md:w-1/2 rounded-lg shadow-lg object-cover">
+      <img src="https://static.vecteezy.com/system/resources/thumbnails/060/705/571/small/traditional-mortar-and-pestle-for-grinding-ingredients-photo.jpeg" alt="contact image" class="w-full md:w-1/2 rounded-lg shadow-lg object-cover">
 
       <!-- Info -->
       <div class="md:w-1/2 space-y-6 text-gray-700">

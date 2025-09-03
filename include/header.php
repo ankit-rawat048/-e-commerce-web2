@@ -1,7 +1,7 @@
-<header class="bg-white shadow-md px-6 py-4 flex items-center justify-between">
+<header class="bg-white shadow-md px-6 flex items-center justify-between">
   <!-- Logo -->
   <div class="flex items-center space-x-4">
-    <img src="https://shrigangaherbal.com/assets/logo-new-DYO2f-fG.png" alt="logo" class="h-24 w-auto">
+    <a href="index.php"><img src="https://shrigangaherbal.com/assets/logo-new-DYO2f-fG.png" style="height:8rem;" alt="logo" class="h-24 w-auto"></a>
 </div>
 
 

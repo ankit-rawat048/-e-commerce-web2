@@ -15,10 +15,10 @@
     <div>
       <h3 class="font-bold text-lg mb-4">COMPANY</h3>
       <div class="flex flex-col gap-2 text-gray-400 text-sm">
-        <p>Home</p>
-        <p>About us</p>
-        <p>Delivery</p>
-        <p>Privacy Policy</p>
+        <a href="index.php">Home</a>
+        <a href="about.php">About Us</a>
+        <a href="contact.php">Contact</a>
+        <a href="index.php">Privacy Policy</a>
       </div>
     </div>
 

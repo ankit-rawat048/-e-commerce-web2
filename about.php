@@ -24,7 +24,7 @@
 
     <!-- Image and Text -->
     <section class="flex flex-col md:flex-row items-center gap-8">
-      <img src="https://shrigangaherbal.com/assets/p_img64-C8_eQaK1.png" alt="aboutImg" class="w-full md:w-1/2 rounded-lg shadow-lg object-cover">
+      <img src="https://shrigangaherbal.com/assets/logo-new-DYO2f-fG.png" alt="aboutImg" class="w-full md:w-1/2 object-cover">
       
       <div class="md:w-1/2 space-y-4 text-gray-700">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda natus excepturi doloribus voluptates repellendus optio doloremque earum mollitia alias voluptatibus maxime obcaecati, odio labore. Dolorum quas illo enim aliquam optio dolor vero fuga, corrupti expedita odio beatae quae eligendi assumenda accusantium nemo commodi! Nobis, animi!</p>
