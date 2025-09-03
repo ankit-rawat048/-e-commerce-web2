@@ -23,16 +23,16 @@
         <h4 class="font-semibold mb-2">CATEGORIES</h4>
         <div class="flex flex-col gap-2">
           <label class="flex items-center gap-2">
-            <input type="checkbox" name="productType" value="ayurvedic" class="accent-green-600">
-            Ayurvedic
+            <input type="checkbox" name="productType" value="oil" class="accent-green-600">
+            Oil
           </label>
           <label class="flex items-center gap-2">
-            <input type="checkbox" name="productType" value="herbal" class="accent-green-600">
-            Herbal
+            <input type="checkbox" name="productType" value="shampoo" class="accent-green-600">
+            Shampoo
           </label>
           <label class="flex items-center gap-2">
-            <input type="checkbox" name="productType" value="organic" class="accent-green-600">
-            Organic
+            <input type="checkbox" name="productType" value="tablet" class="accent-green-600">
+            Taplet
           </label>
         </div>
       </div>
@@ -43,10 +43,10 @@
       <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6 gap-4">
         <h1 class="text-2xl font-bold">ALL COLLECTION</h1>
         <select class="border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-green-600">
-          <option value="">--Select--</option>
-          <option value="ayurvedic">Ayurvedic</option>
-          <option value="herbal">Herbal</option>
-          <option value="organic">Organic</option>
+          <option value="">Sort By:</option>
+          <option value="ayurvedic">Relavent</option>
+          <option value="herbal">Low to High</option>
+          <option value="organic">High to Low</option>
         </select>
       </div>
 
