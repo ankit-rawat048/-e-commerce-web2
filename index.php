@@ -97,13 +97,16 @@
   </section>
 
 <!-- Categories Page -->
-<section class="py-16 bg-gray-100">
-  <div class="max-w-6xl mx-auto px-6">
+<section class="py-16 bg-gray-200">
+  <div class="max-w-6xl mx-auto px-6 ">
+
+        <h1 class="py-6 border-b-2 border-red-300 text-center text-3xl font-bold">CATAGORIES</h1>
+
 
     <!-- Ayurvedic Category -->
-    <div class="mb-16">
+    <div class="my-16" >
       <div class="flex items-center space-x-3 mb-4">
-        <h1 class="border-b-2 text-center text-3xl font-bold">AYURVEDIC</h1>
+        <h1 class="border-b-2 border-black text-center text-2xl font-bold">OIL</h1>
         <!-- <span class="text-green-600 text-3xl font-bold">-</span> -->
       </div>
       <!-- <p class="text-gray-600 mb-10">Discover our top-selling products loved by our customers.</p> -->
@@ -135,7 +138,7 @@
     <!-- Herbal Category -->
     <div class="mb-16">
       <div class="flex items-center space-x-3 mb-4">
-        <h1 class="border-b-2 text-center text-3xl font-bold">HERBAL</h1>
+        <h1  class="border-b-2 border-black text-center text-2xl font-bold">SHAMPOO</h1>
         <!-- <span class="text-green-600 text-3xl font-bold">-</span> -->
       </div>
       <!-- <p class="text-gray-600 mb-10">Discover our top-selling products loved by our customers.</p> -->
@@ -164,10 +167,10 @@
       </div>
     </div>
 
-    <!-- Organic Category -->
+    <!-- tablet Category -->
     <div class="mb-16">
       <div class="flex items-center space-x-3 mb-4">
-        <h1 class="border-b-2 text-center text-3xl font-bold">ORGANIC</h1>
+        <h1 class="border-b-2 border-black text-center text-2xl font-bold">TABLET</h1>
         <!-- <span class="text-green-600 text-3xl font-bold">-</span> -->
       </div>
       <!-- <p class="text-gray-600 mb-10">Discover our top-selling products loved by our customers.</p> -->
@@ -175,7 +178,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         <a href="product.php?id=9" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
           <img src="https://shrigangaherbal.com/assets/p_img54-B2o6kMBP.png" alt="product" class="w-full h-40 object-contain mb-3">
-          <p class="font-semibold">Organic  Product</p>
+          <p class="font-semibold">tablet Product</p>
           <p class="text-green-600 font-bold">&#8377; 130</p>
         </a>
         <a href="product.php?id=3" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
@@ -190,7 +193,7 @@
         </a>
         <a href="product.php?id=8" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
           <img src="https://shrigangaherbal.com/assets/p_img56-BXkPPiBF.png" alt="product" class="w-full h-40 object-contain mb-3">
-          <p class="font-semibold">Organic Product 4</p>
+          <p class="font-semibold">tablet Product 4</p>
           <p class="text-green-600 font-bold">&#8377; 210</p>
         </a>
       </div>

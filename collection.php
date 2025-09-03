@@ -3,12 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php include("include/title.php") ?>
-
+  <?php include("include/title.php") ?>
   <?php include("include/links.php") ?>
 </head>
-<body class="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]
-">
+<body class="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
 
   <!-- Header -->
   <?php include("include/header.php") ?>
@@ -23,16 +21,16 @@
         <h4 class="font-semibold mb-2">CATEGORIES</h4>
         <div class="flex flex-col gap-2">
           <label class="flex items-center gap-2">
-            <input type="checkbox" name="productType" value="oil" class="accent-green-600">
-            Oil
+            <input type="checkbox" name="category" value="oil" class="category-checkbox accent-green-600">
+            oil
           </label>
           <label class="flex items-center gap-2">
-            <input type="checkbox" name="productType" value="shampoo" class="accent-green-600">
-            Shampoo
+            <input type="checkbox" name="category" value="sampoo" class="category-checkbox accent-green-600">
+            sampoo
           </label>
           <label class="flex items-center gap-2">
-            <input type="checkbox" name="productType" value="tablet" class="accent-green-600">
-            Taplet
+            <input type="checkbox" name="category" value="tablet" class="category-checkbox accent-green-600">
+            tablet
           </label>
         </div>
       </div>
@@ -42,44 +40,97 @@
     <main class="md:col-span-3">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6 gap-4">
         <h1 class="text-2xl font-bold">ALL COLLECTION</h1>
-        <select class="border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-green-600">
+        <select id="sortSelect" class="border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-green-600">
           <option value="">Sort By:</option>
-          <option value="ayurvedic">Relavent</option>
-          <option value="herbal">Low to High</option>
-          <option value="organic">High to Low</option>
+          <option value="priceLow">Price: Low to High</option>
+          <option value="priceHigh">Price: High to Low</option>
+          <option value="nameAsc">Name: A-Z</option>
+          <option value="nameDesc">Name: Z-A</option>
         </select>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <a href="product.php?id=1" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
-          <img src="https://shrigangaherbal.com/assets/p_img59-BApsG3fC.png" alt="product" class="w-full h-40 object-contain mb-3">
-          <p class="font-semibold">Himalayan Ghutno ke Dard Grice ki Fanki</p>
-          <p class="text-green-600 font-bold">&#8377; 100</p>
-        </a>
+      <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Product Items -->
+        <div class="product-card bg-white p-4 rounded-lg shadow hover:shadow-lg transition" data-category="oil" data-price="100" data-name="Himalayan Ghutno ke Dard Grice ki Fanki">
+          <a href="product.php?id=1">
+            <img src="https://shrigangaherbal.com/assets/p_img59-BApsG3fC.png" alt="product" class="w-full h-40 object-contain mb-3">
+            <p class="font-semibold">Himalayan Ghutno ke Dard Grice ki Fanki</p>
+            <p class="text-green-600 font-bold">&#8377; 100</p>
+          </a>
+        </div>
 
-        <a href="product.php?id=2" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
-          <img src="https://shrigangaherbal.com/assets/p_img60-D3dQvT_e.png" alt="product" class="w-full h-40 object-contain mb-3">
-          <p class="font-semibold">Hari Ganga Balm</p>
-          <p class="text-green-600 font-bold">&#8377; 200</p>
-        </a>
+        <div class="product-card bg-white p-4 rounded-lg shadow hover:shadow-lg transition" data-category="herbal" data-price="200" data-name="Hari Ganga Balm">
+          <a href="product.php?id=2">
+            <img src="https://shrigangaherbal.com/assets/p_img60-D3dQvT_e.png" alt="product" class="w-full h-40 object-contain mb-3">
+            <p class="font-semibold">Hari Ganga Balm</p>
+            <p class="text-green-600 font-bold">&#8377; 200</p>
+          </a>
+        </div>
 
-        <a href="product.php?id=3" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
-          <img src="https://shrigangaherbal.com/assets/p_img61-BAipXeaP.png" alt="product" class="w-full h-40 object-contain mb-3">
-          <p class="font-semibold">Samahan Herbal Tea</p>
-          <p class="text-green-600 font-bold">&#8377; 200</p>
-        </a>
+        <div class="product-card bg-white p-4 rounded-lg shadow hover:shadow-lg transition" data-category="herbal" data-price="200" data-name="Samahan Herbal Tea">
+          <a href="product.php?id=3">
+            <img src="https://shrigangaherbal.com/assets/p_img61-BAipXeaP.png" alt="product" class="w-full h-40 object-contain mb-3">
+            <p class="font-semibold">Samahan Herbal Tea</p>
+            <p class="text-green-600 font-bold">&#8377; 200</p>
+          </a>
+        </div>
 
-        <a href="product.php?id=4" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
-          <img src="https://shrigangaherbal.com/assets/p_img62-D0zloGw6.png" alt="product" class="w-full h-40 object-contain mb-3">
-          <p class="font-semibold">Nidco Shilajit Paste</p>
-          <p class="text-green-600 font-bold">&#8377; 110</p>
-        </a>
+        <div class="product-card bg-white p-4 rounded-lg shadow hover:shadow-lg transition" data-category="tablet" data-price="110" data-name="Nidco Shilajit Paste">
+          <a href="product.php?id=4">
+            <img src="https://shrigangaherbal.com/assets/p_img62-D0zloGw6.png" alt="product" class="w-full h-40 object-contain mb-3">
+            <p class="font-semibold">Nidco Shilajit Paste</p>
+            <p class="text-green-600 font-bold">&#8377; 110</p>
+          </a>
+        </div>
       </div>
     </main>
   </div>
 
   <!-- Footer -->
   <?php include("include/footer.php") ?>
+
+  <!-- JS for filtering and sorting -->
+  <script>
+    const categoryCheckboxes = document.querySelectorAll(".category-checkbox");
+    const productsGrid = document.getElementById("productsGrid");
+    const productCards = Array.from(document.querySelectorAll(".product-card"));
+    const sortSelect = document.getElementById("sortSelect");
+
+    function filterProducts() {
+      const selectedCategories = Array.from(categoryCheckboxes)
+        .filter(cb => cb.checked)
+        .map(cb => cb.value);
+
+      productCards.forEach(card => {
+        if (selectedCategories.length === 0 || selectedCategories.includes(card.dataset.category)) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+
+    function sortProducts() {
+      const sortValue = sortSelect.value;
+      let sortedCards = [...productCards];
+
+      if (sortValue === "priceLow") {
+        sortedCards.sort((a,b) => parseFloat(a.dataset.price) - parseFloat(b.dataset.price));
+      } else if (sortValue === "priceHigh") {
+        sortedCards.sort((a,b) => parseFloat(b.dataset.price) - parseFloat(a.dataset.price));
+      } else if (sortValue === "nameAsc") {
+        sortedCards.sort((a,b) => a.dataset.name.localeCompare(b.dataset.name));
+      } else if (sortValue === "nameDesc") {
+        sortedCards.sort((a,b) => b.dataset.name.localeCompare(a.dataset.name));
+      }
+
+      // Append sorted elements
+      sortedCards.forEach(card => productsGrid.appendChild(card));
+    }
+
+    categoryCheckboxes.forEach(cb => cb.addEventListener("change", filterProducts));
+    sortSelect.addEventListener("change", sortProducts);
+  </script>
 
 </body>
 </html>
