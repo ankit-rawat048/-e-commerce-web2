@@ -31,7 +31,7 @@
       </div>
       <!-- <p class="text-gray-600 mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias sed nulla tenetur esse, quas quasi. Incidunt, fuga voluptatum.</p> -->
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
         <a href="product.php?id=1" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
           <img src="https://shrigangaherbal.com/assets/p_img59-BApsG3fC.png" alt="product" class="w-full h-40 object-contain mb-3">
           <p class="font-semibold">Himalayan Ghutno ke Dard Grice ki Fanki</p>
@@ -68,7 +68,7 @@
       </div>
       <!-- <p class="text-gray-600 mb-10">Discover our top-selling products loved by our customers.</p> -->
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
         <a href="product.php?id=1" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
           <img src="https://shrigangaherbal.com/assets/p_img59-BApsG3fC.png" alt="product" class="w-full h-40 object-contain mb-3">
           <p class="font-semibold">Himalayan Ghutno ke Dard Grice ki Fanki</p>
@@ -111,7 +111,7 @@
       </div>
       <!-- <p class="text-gray-600 mb-10">Discover our top-selling products loved by our customers.</p> -->
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
         <a href="product.php?id=1" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
           <img src="https://shrigangaherbal.com/assets/p_img60-D3dQvT_e.png" alt="product" class="w-full h-40 object-contain mb-3">
           <p class="font-semibold">Himalayan Ghutno ke Dard Grice ki Fanki</p>
@@ -143,7 +143,7 @@
       </div>
       <!-- <p class="text-gray-600 mb-10">Discover our top-selling products loved by our customers.</p> -->
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
         <a href="product.php?id=5" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
           <img src="https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png" alt="product" class="w-full h-40 object-contain mb-3">
           <p class="font-semibold">Kailash Jeevan MultiPurpose Cream</p>
@@ -175,7 +175,7 @@
       </div>
       <!-- <p class="text-gray-600 mb-10">Discover our top-selling products loved by our customers.</p> -->
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
         <a href="product.php?id=9" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
           <img src="https://shrigangaherbal.com/assets/p_img54-B2o6kMBP.png" alt="product" class="w-full h-40 object-contain mb-3">
           <p class="font-semibold">tablet Product</p>

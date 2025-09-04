@@ -13,16 +13,16 @@
     <li><a href="contact.php" class="hover:text-green-600">CONTACT</a></li>
   </ul>
 
-  <!-- Desktop Icons -->
+  <!-- Desktop Icons
   <div class="hidden md:flex space-x-4 text-gray-700 text-xl items-center">
     <a href="signup.php"><i class="fa-regular fa-user hover:text-green-600 cursor-pointer"></i></a>
     <a href="cart.php"><i class="fa-solid fa-bag-shopping hover:text-green-600 cursor-pointer"></i></a>
-  </div>
+  </div> -->
 
   <!-- Mobile Hamburger Icon -->
   <div class="md:hidden flex items-center space-x-4">
-    <a href="signup.php"><i class="fa-regular fa-user text-gray-700 text-xl hover:text-green-600 cursor-pointer"></i></a>
-    <a href="cart.php"><i class="fa-solid fa-bag-shopping text-gray-700 text-xl hover:text-green-600 cursor-pointer"></i></a>
+    <!-- <a href="signup.php"><i class="fa-regular fa-user text-gray-700 text-xl hover:text-green-600 cursor-pointer"></i></a>
+    <a href="cart.php"><i class="fa-solid fa-bag-shopping text-gray-700 text-xl hover:text-green-600 cursor-pointer"></i></a> -->
     <button id="menu-btn" class="focus:outline-none">
       <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg">

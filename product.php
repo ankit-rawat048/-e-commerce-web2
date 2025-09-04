@@ -1,70 +1,42 @@
 <?php
-
 session_start();
 // Get the product ID from URL query string
 $productId = $_GET['id'] ?? null;
 
-// For demo, sample products array
+// Sample products array
 $products = [
     1 => [
         'name' => 'Himalayan Ghutno ke Dard Grice ki Fanki',
         'price' => 100,
         'image' => 'https://shrigangaherbal.com/assets/p_img59-BApsG3fC.png',
-        'description' => 'A powerful herbal remedy for joint and knee pain relief.'
+        'description' => 'A powerful herbal remedy for joint and knee pain relief.',
+        'categories' => 'oil'
     ],
     2 => [
         'name' => 'Hari Ganga Balm',
         'price' => 200,
         'image' => 'https://shrigangaherbal.com/assets/p_img60-D3dQvT_e.png',
-        'description' => 'An herbal balm for instant pain relief.'
+        'description' => 'An herbal balm for instant pain relief.',
+        'categories' => 'balm'
     ],
     3 => [
         'name' => 'Samahan Herbal Tea',
         'price' => 200,
         'image' => 'https://shrigangaherbal.com/assets/p_img61-BAipXeaP.png',
-        'description' => 'Natural herbal tea to boost immunity and relieve cold symptoms.'
+        'description' => 'Natural herbal tea to boost immunity and relieve cold symptoms.',
+        'categories' => 'tea'
     ],
     4 => [
         'name' => 'Nidco Shilajit Paste',
         'price' => 200,
         'image' => 'https://shrigangaherbal.com/assets/p_img62-D0zloGw6.png',
-        'description' => 'Pure Shilajit paste for energy and vitality.'
-    ],
-    5 => [
-        'name' => 'Kailash Jeevan MultiPurpose Cream',
-        'price' => 200,
-        'image' => 'https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png',
-        'description' => 'Pure Shilajit paste for energy and vitality.'
-    ],
-    6 => [
-        'name' => 'Kesri Marham',
-        'price' => 200,
-        'image' => 'https://shrigangaherbal.com/assets/p_img65-jtLWbZUI.png',
-        'description' => 'Pure Shilajit paste for energy and vitality.'
-    ],
-    7 => [
-        'name' => 'Herbal Product',
-        'price' => 200,
-        'image' => 'https://shrigangaherbal.com/assets/p_img55-BB5qRI_o.png',
-        'description' => 'Pure Shilajit paste for energy and vitality.'
-    ],
-    8 => [
-        'name' => 'Herbal Product',
-        'price' => 200,
-        'image' => 'https://shrigangaherbal.com/assets/p_img56-BXkPPiBF.png',
-        'description' => 'Pure Shilajit paste for energy and vitality.'
-    ],
-    9 => [
-        'name' => 'Herbal Product',
-        'price' => 200,
-        'image' => 'https://shrigangaherbal.com/assets/p_img54-B2o6kMBP.png',
-        'description' => 'Pure Shilajit paste for energy and vitality.'
+        'description' => 'Pure Shilajit paste for energy and vitality.',
+        'categories' => 'paste'
     ],
 ];
 
 // Check if product exists
 $product = $products[$productId] ?? null;
-
 if (!$product) {
     echo "Product not found!";
     exit;
@@ -74,52 +46,48 @@ if (!$product) {
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title><?php echo $product['name']; ?></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <?php include("include/title.php") ?>
   <?php include("include/links.php") ?>
 </head>
-<body class="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]
-">
+<body class="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
 
   <?php include("include/header.php") ?>
 
   <!-- Product Details -->
-  <div class="max-w-5xl mx-auto p-6 mt-10">
+  <div class="max-w-5xl mx-auto p-4 sm:p-6 mt-10">
     <div class="flex flex-col md:flex-row gap-8">
+      
       <!-- Product Image -->
       <div class="md:w-1/2">
         <img src="<?php echo $product['image']; ?>" 
              alt="<?php echo $product['name']; ?>" 
-             class="w-full h-[350px] object-contain rounded">
+             class="w-full h-64 sm:h-80 md:h-[350px] object-contain rounded">
       </div>
 
       <!-- Product Info -->
       <div class="flex-1">
-        <h1 class="text-3xl font-bold mb-3"><?php echo $product['name']; ?></h1>
+        <h1 class="text-2xl sm:text-3xl font-bold mb-3"><?php echo $product['name']; ?></h1>
 
-        <!-- Ratings -->
-        <div class="flex items-center gap-2 mb-3 text-red-500">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star text-red-100"></i>
-          <span class="text-gray-600 text-sm">(122 reviews)</span>
+        <!-- Category -->
+        <div class="py-2 mb-3">
+          <span class="inline-block bg-gray-400 text-white font-bold uppercase px-4 py-2 rounded-lg shadow cursor-pointer">
+            <?php echo $product['categories']; ?>
+          </span>
         </div>
 
         <!-- Price -->
-        <p class="text-green-600 text-2xl font-semibold mb-4">
+        <p class="text-2xl sm:text-3xl font-semibold text-green-600 mb-4">
           &#8377; <?php echo $product['price']; ?>
         </p>
 
         <!-- Description -->
-        <p class="text-gray-700 mb-6">
-          <?php echo $product['description']; ?>
-        </p>
+        <p class="text-gray-700 mb-6"><?php echo $product['description']; ?></p>
 
         <!-- Size Selector -->
         <div class="mb-6">
-          <p class="font-semibold mb-2">Select Size</p>
-          <select class="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-600">
+          <label class="font-semibold mb-2 block">Select Size</label>
+          <select class="border border-gray-300 rounded px-3 py-2 w-full sm:w-1/2 focus:outline-none focus:ring-2 focus:ring-green-600">
             <option>23g</option>
             <option>50g</option>
             <option>100g</option>
@@ -127,28 +95,24 @@ if (!$product) {
         </div>
 
         <!-- Add to Cart -->
-<form method="post" action="cart.php">
-  <input type="hidden" name="id" value="<?php echo $productId; ?>">
-  <input type="hidden" name="name" value="<?php echo $product['name']; ?>">
-  <input type="hidden" name="price" value="<?php echo $product['price']; ?>">
-  <input type="hidden" name="image" value="<?php echo $product['image']; ?>">
-  
-  <!-- Default weight, you can make this dynamic -->
-  <input type="hidden" name="weight" value="23g">
+        <form method="post" action="cart.php" class="flex flex-col sm:flex-row sm:items-center gap-4">
+          <input type="hidden" name="id" value="<?php echo $productId; ?>">
+          <input type="hidden" name="name" value="<?php echo $product['name']; ?>">
+          <input type="hidden" name="price" value="<?php echo $product['price']; ?>">
+          <input type="hidden" name="image" value="<?php echo $product['image']; ?>">
+          <input type="hidden" name="weight" value="23g">
 
-  <!-- Quantity -->
-  <input type="number" name="quantity" value="1" min="1" 
-         class="border px-2 py-1 w-16 rounded mb-4">
+          <input type="number" name="quantity" value="1" min="1" 
+                 class="border px-2 py-1 w-20 rounded">
 
-  <button type="submit" name="add_to_cart" 
-          class="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition">
-    Add to Cart
-  </button>
-</form>
-
+          <button type="submit" name="add_to_cart" 
+                  class="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition">
+            Add to Cart
+          </button>
+        </form>
 
         <!-- Extra Info -->
-        <ul class="text-sm text-gray-600 space-y-2">
+        <ul class="text-sm text-gray-600 space-y-2 mt-6">
           <li>✔ 100% Original Product.</li>
           <li>✔ Cash on delivery is available.</li>
           <li>✔ Easy return & exchange policy within 7 days.</li>
@@ -158,13 +122,13 @@ if (!$product) {
   </div>
 
   <!-- Related Products -->
-  <div class="max-w-6xl mx-auto px-6 mt-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-16">
     <div class="text-center mb-8">
       <h2 class="text-2xl font-bold">RELATED PRODUCTS</h2>
       <div class="w-16 h-1 bg-green-600 mx-auto mt-2 rounded"></div>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
         <a href="product.php?id=1" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
           <img src="https://shrigangaherbal.com/assets/p_img59-BApsG3fC.png" alt="product" class="w-full h-40 object-contain mb-3">
           <p class="font-semibold">Himalayan Ghutno ke Dard Grice ki Fanki</p>
@@ -191,7 +155,6 @@ if (!$product) {
       </div>
   </div>
 
-  <!-- Footer -->
   <?php include("include/footer.php") ?>
    
 </body>
