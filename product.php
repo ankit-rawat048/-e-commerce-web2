@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 // Get the product ID from URL query string
 $productId = $_GET['id'] ?? null;
 
@@ -41,6 +42,15 @@ if (!$product) {
     echo "Product not found!";
     exit;
 }
+
+// // Category colors
+// $categoryColors = [
+//   'oil' => 'bg-yellow-500',
+//   'balm' => 'bg-red-500',
+//   'tea' => 'bg-green-500',
+//   'paste' => 'bg-orange-500'
+// ];
+$catClass = $categoryColors[$product['categories']] ?? 'bg-gray-400';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -67,17 +77,20 @@ if (!$product) {
 
       <!-- Product Info -->
       <div class="flex-1">
-        <h1 class="text-2xl sm:text-3xl font-bold mb-3"><?php echo $product['name']; ?></h1>
+        
+        <!-- Name & Category -->
+        <div class="py-2 mb-3 inline-flex sm:flex-col sm:gap-4">
+          <h1 class="text-2xl sm:text-3xl font-bold mb-2 sm:mb-0">
+            <?php echo $product['name']; ?>
+          </h1>
 
-        <!-- Category -->
-        <div class="py-2 mb-3">
-          <span class="inline-block bg-gray-400 text-white font-bold uppercase px-4 py-2 rounded-lg shadow cursor-pointer">
+          <div class="<?php echo $catClass; ?> w-24 text-white font-bold uppercase px-4 py-2 rounded-lg shadow cursor-pointer">
             <?php echo $product['categories']; ?>
-          </span>
+          </div>
         </div>
 
         <!-- Price -->
-        <p class="text-2xl sm:text-3xl font-semibold text-green-600 mb-4">
+        <p class="text-2xl sm:text-3xl font-semibold text-green-600 mb-4 price-display">
           &#8377; <?php echo $product['price']; ?>
         </p>
 
@@ -86,11 +99,11 @@ if (!$product) {
 
         <!-- Size Selector -->
         <div class="mb-6">
-          <label class="font-semibold mb-2 block">Select Size</label>
-          <select class="border border-gray-300 rounded px-3 py-2 w-full sm:w-1/2 focus:outline-none focus:ring-2 focus:ring-green-600">
-            <option>23g</option>
-            <option>50g</option>
-            <option>100g</option>
+          <label class="font-semibold mb-2 block">Select Weight</label>
+          <select id="proQuan" class="border border-gray-300 rounded px-3 py-2 w-full sm:w-1/2 focus:outline-none focus:ring-2 focus:ring-green-600">
+            <option value="1">23g</option>
+            <option value="2">50g</option>
+            <option value="3">100g</option>
           </select>
         </div>
 
@@ -102,8 +115,7 @@ if (!$product) {
           <input type="hidden" name="image" value="<?php echo $product['image']; ?>">
           <input type="hidden" name="weight" value="23g">
 
-          <input type="number" name="quantity" value="1" min="1" 
-                 class="border px-2 py-1 w-20 rounded">
+          <!-- <input type="number" name="quantity" value="1" min="1" class="border px-2 py-1 w-20 rounded"> -->
 
           <button type="submit" name="add_to_cart" 
                   class="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition">
@@ -129,33 +141,47 @@ if (!$product) {
     </div>
 
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-        <a href="product.php?id=1" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
-          <img src="https://shrigangaherbal.com/assets/p_img59-BApsG3fC.png" alt="product" class="w-full h-40 object-contain mb-3">
-          <p class="font-semibold">Himalayan Ghutno ke Dard Grice ki Fanki</p>
-          <p class="text-green-600 font-bold">&#8377; 100</p>
-        </a>
-
-        <a href="product.php?id=2" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
-          <img src="https://shrigangaherbal.com/assets/p_img60-D3dQvT_e.png" alt="product" class="w-full h-40 object-contain mb-3">
-          <p class="font-semibold">Hari Ganga Balm</p>
-          <p class="text-green-600 font-bold">&#8377; 200</p>
-        </a>
-
-        <a href="product.php?id=3" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
-          <img src="https://shrigangaherbal.com/assets/p_img61-BAipXeaP.png" alt="product" class="w-full h-40 object-contain mb-3">
-          <p class="font-semibold">Samahan Herbal Tea</p>
-          <p class="text-green-600 font-bold">&#8377; 200</p>
-        </a>
-
-        <a href="product.php?id=4" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
-          <img src="https://shrigangaherbal.com/assets/p_img62-D0zloGw6.png" alt="product" class="w-full h-40 object-contain mb-3">
-          <p class="font-semibold">Nidco Shilajit Paste</p>
-          <p class="text-green-600 font-bold">&#8377; 110</p>
-        </a>
-      </div>
+      <?php foreach($products as $id => $prod): ?>
+        <?php if($id != $productId): ?>
+          <a href="product.php?id=<?php echo $id; ?>" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
+            <img src="<?php echo $prod['image']; ?>" alt="product" class="w-full h-40 object-contain mb-3">
+            <p class="font-semibold"><?php echo $prod['name']; ?></p>
+            <p class="text-green-600 font-bold">&#8377; <?php echo $prod['price']; ?></p>
+          </a>
+        <?php endif; ?>
+      <?php endforeach; ?>
+    </div>
   </div>
 
   <?php include("include/footer.php") ?>
+
+  <script>
+    const proQuantity = document.getElementById("proQuan");
+    const priceDisplay = document.querySelector(".price-display");
+    const priceInput = document.querySelector("input[name='price']");
+    const weightInput = document.querySelector("input[name='weight']");
+
+    // Prices for different sizes
+    const priceMap = {
+      "1": <?php echo $product['price']; ?>, // default
+      "2": <?php echo $product['price'] + 100; ?>,
+      "3": <?php echo $product['price'] + 200; ?>
+    };
+
+    // Weights for different sizes
+    const weightMap = {
+      "1": "23g",
+      "2": "50g",
+      "3": "100g"
+    };
+
+    proQuantity.addEventListener("change", () => {
+      const selected = proQuantity.value;
+      priceDisplay.textContent = "₹ " + priceMap[selected];
+      priceInput.value = priceMap[selected];
+      weightInput.value = weightMap[selected];
+    });
+  </script>
    
 </body>
 </html>

@@ -110,97 +110,88 @@
         <!-- <span class="text-green-600 text-3xl font-bold">-</span> -->
       </div>
       <!-- <p class="text-gray-600 mb-10">Discover our top-selling products loved by our customers.</p> -->
+<div class="relative w-full max-w-6xl mx-auto">
+  <!-- Left Button -->
+  <button onclick="scrollGallery(-1)" 
+    class="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-700/70 hover:bg-gray-900 text-white px-3 py-2 rounded-full z-10">
+    ◀
+  </button>
 
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
-        <a href="product.php?id=1" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
-          <img src="https://shrigangaherbal.com/assets/p_img60-D3dQvT_e.png" alt="product" class="w-full h-40 object-contain mb-3">
-          <p class="font-semibold">Himalayan Ghutno ke Dard Grice ki Fanki</p>
-          <p class="text-green-600 font-bold">&#8377; 100</p>
-        </a>
-        <a href="product.php?id=2" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
-          <img src="https://shrigangaherbal.com/assets/p_img59-BApsG3fC.png" alt="product" class="w-full h-40 object-contain mb-3">
-          <p class="font-semibold">Hari Ganga Balm</p>
-          <p class="text-green-600 font-bold">&#8377; 200</p>
-        </a>
-        <a href="product.php?id=3" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
-          <img src="https://shrigangaherbal.com/assets/p_img61-BAipXeaP.png" alt="product" class="w-full h-40 object-contain mb-3">
-          <p class="font-semibold">Samahan Herbal Tea</p>
-          <p class="text-green-600 font-bold">&#8377; 200</p>
-        </a>
-        <a href="product.php?id=4" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
-          <img src="https://shrigangaherbal.com/assets/p_img62-D0zloGw6.png" alt="product" class="w-full h-40 object-contain mb-3">
-          <p class="font-semibold">Nidco Shilajit Paste</p>
-          <p class="text-green-600 font-bold">&#8377; 110</p>
-        </a>
-      </div>
-    </div>
+  <!-- Scrollable Gallery -->
+  <div id="productGallery" 
+    class="overflow-x-auto whitespace-nowrap scroll-smooth flex gap-4 p-4 no-scrollbar">
+    
+    <!-- Product 1 -->
+    <a href="product.php?id=5" class="inline-block bg-white p-4 rounded-lg shadow hover:shadow-lg transition w-48">
+      <img src="https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png" alt="product" class="w-full h-40 object-contain mb-3">
+      <p class="font-semibold">Kailash Jeevan MultiPurpose Cream</p>
+      <p class="text-green-600 font-bold">&#8377; 150</p>
+    </a>
 
-    <!-- Herbal Category -->
-    <div class="mb-16">
-      <div class="flex items-center space-x-3 mb-4">
-        <h1  class="border-b-2 border-black text-center text-2xl font-bold">SHAMPOO</h1>
-        <!-- <span class="text-green-600 text-3xl font-bold">-</span> -->
-      </div>
-      <!-- <p class="text-gray-600 mb-10">Discover our top-selling products loved by our customers.</p> -->
+    <!-- Product 2 -->
+    <a href="product.php?id=6" class="inline-block bg-white p-4 rounded-lg shadow hover:shadow-lg transition w-48">
+      <img src="https://shrigangaherbal.com/assets/p_img65-jtLWbZUI.png" alt="product" class="w-full h-40 object-contain mb-3">
+      <p class="font-semibold">Kesri Marham</p>
+      <p class="text-green-600 font-bold">&#8377; 200</p>
+    </a>
 
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
-        <a href="product.php?id=5" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
-          <img src="https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png" alt="product" class="w-full h-40 object-contain mb-3">
-          <p class="font-semibold">Kailash Jeevan MultiPurpose Cream</p>
-          <p class="text-green-600 font-bold">&#8377; 150</p>
-        </a>
-        <a href="product.php?id=6" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
-          <img src="https://shrigangaherbal.com/assets/p_img65-jtLWbZUI.png" alt="product" class="w-full h-40 object-contain mb-3">
-          <p class="font-semibold">Kesri Marham</p>
-          <p class="text-green-600 font-bold">&#8377; 200</p>
-        </a>
-        <a href="product.php?id=7" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
-          <img src="https://shrigangaherbal.com/assets/p_img55-BB5qRI_o.png" alt="product" class="w-full h-40 object-contain mb-3">
-          <p class="font-semibold">Herbal Product</p>
-          <p class="text-green-600 font-bold">&#8377; 180</p>
-        </a>
-        <a href="product.php?id=8" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
-          <img src="https://shrigangaherbal.com/assets/p_img56-BXkPPiBF.png" alt="product" class="w-full h-40 object-contain mb-3">
-          <p class="font-semibold">Herbal Product</p>
-          <p class="text-green-600 font-bold">&#8377; 220</p>
-        </a>
-      </div>
-    </div>
+    <!-- Product 3 -->
+    <a href="product.php?id=7" class="inline-block bg-white p-4 rounded-lg shadow hover:shadow-lg transition w-48">
+      <img src="https://shrigangaherbal.com/assets/p_img55-BB5qRI_o.png" alt="product" class="w-full h-40 object-contain mb-3">
+      <p class="font-semibold">Herbal Product</p>
+      <p class="text-green-600 font-bold">&#8377; 180</p>
+    </a>
 
-    <!-- tablet Category -->
-    <div class="mb-16">
-      <div class="flex items-center space-x-3 mb-4">
-        <h1 class="border-b-2 border-black text-center text-2xl font-bold">TABLET</h1>
-        <!-- <span class="text-green-600 text-3xl font-bold">-</span> -->
-      </div>
-      <!-- <p class="text-gray-600 mb-10">Discover our top-selling products loved by our customers.</p> -->
+    <!-- Product 4 -->
+    <a href="product.php?id=8" class="inline-block bg-white p-4 rounded-lg shadow hover:shadow-lg transition w-48">
+      <img src="https://shrigangaherbal.com/assets/p_img56-BXkPPiBF.png" alt="product" class="w-full h-40 object-contain mb-3">
+      <p class="font-semibold">Herbal Product</p>
+      <p class="text-green-600 font-bold">&#8377; 220</p>
+    </a>
 
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
-        <a href="product.php?id=9" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
-          <img src="https://shrigangaherbal.com/assets/p_img54-B2o6kMBP.png" alt="product" class="w-full h-40 object-contain mb-3">
-          <p class="font-semibold">tablet Product</p>
-          <p class="text-green-600 font-bold">&#8377; 130</p>
-        </a>
-        <a href="product.php?id=3" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
-          <img src="https://shrigangaherbal.com/assets/p_img61-BAipXeaP.png" alt="product" class="w-full h-40 object-contain mb-3">
-          <p class="font-semibold">Samahan Herbal Tea</p>
-          <p class="text-green-600 font-bold">&#8377; 180</p>
-        </a>
-        <a href="product.php?id=5" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
-          <img src="https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png" alt="product" class="w-full h-40 object-contain mb-3">
-          <p class="font-semibold">Kailash Jeevan MultiPurpose Cream</p>
-          <p class="text-green-600 font-bold">&#8377; 200</p>
-        </a>
-        <a href="product.php?id=8" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
-          <img src="https://shrigangaherbal.com/assets/p_img56-BXkPPiBF.png" alt="product" class="w-full h-40 object-contain mb-3">
-          <p class="font-semibold">tablet Product 4</p>
-          <p class="text-green-600 font-bold">&#8377; 210</p>
-        </a>
-      </div>
-    </div>
+    <!-- Product 5 -->
+    <a href="product.php?id=9" class="inline-block bg-white p-4 rounded-lg shadow hover:shadow-lg transition w-48">
+      <img src="https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png" alt="product" class="w-full h-40 object-contain mb-3">
+      <p class="font-semibold">Kailash Jeevan MultiPurpose Cream</p>
+      <p class="text-green-600 font-bold">&#8377; 150</p>
+    </a>
+
+    
+    <!-- Product 3 -->
+    <a href="product.php?id=7" class="inline-block bg-white p-4 rounded-lg shadow hover:shadow-lg transition w-48">
+      <img src="https://shrigangaherbal.com/assets/p_img55-BB5qRI_o.png" alt="product" class="w-full h-40 object-contain mb-3">
+      <p class="font-semibold">Herbal Product</p>
+      <p class="text-green-600 font-bold">&#8377; 180</p>
+    </a>
+
+    <!-- Product 4 -->
+    <a href="product.php?id=8" class="inline-block bg-white p-4 rounded-lg shadow hover:shadow-lg transition w-48">
+      <img src="https://shrigangaherbal.com/assets/p_img56-BXkPPiBF.png" alt="product" class="w-full h-40 object-contain mb-3">
+      <p class="font-semibold">Herbal Product</p>
+      <p class="text-green-600 font-bold">&#8377; 220</p>
+    </a>
+
+    <!-- Product 5 -->
+    <a href="product.php?id=9" class="inline-block bg-white p-4 rounded-lg shadow hover:shadow-lg transition w-48">
+      <img src="https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png" alt="product" class="w-full h-40 object-contain mb-3">
+      <p class="font-semibold">Kailash Jeevan MultiPurpose Cream</p>
+      <p class="text-green-600 font-bold">&#8377; 150</p>
+    </a>
 
   </div>
-</section>
+
+  <!-- Right Button -->
+  <button onclick="scrollGallery(1)" 
+    class="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-700/70 hover:bg-gray-900 text-white px-3 py-2 rounded-full z-10">
+    ▶
+  </button>
+</div>
+
+
+    <!-- other categories -->
+
+      <?php include("include/scrollableproduct.php") ?>
+
 
 <!-- Policies Section -->
 <section class="py-16 bg-gray-50">
@@ -235,6 +226,21 @@
 
   <?php include("include/footer.php") ?>
 
+  
+<!-- JS Function -->
+<script>
+function scrollGallery(direction) {
+  const gallery = document.getElementById("productGallery");
+  const scrollAmount = 260; // pixels to scroll per click
+  gallery.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
+}
+</script>
+
+<!-- Optional CSS to hide scrollbar -->
+<style>
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
 
 </body>
 </html>
