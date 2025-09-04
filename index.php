@@ -236,7 +236,7 @@ function scrollGallery(direction) {
 }
 </script>
 
-<!-- Optional CSS to hide scrollbar -->
+Optional CSS to hide scrollbar
 <style>
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
