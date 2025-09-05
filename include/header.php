@@ -1,4 +1,4 @@
-<header class="bg-white shadow-md px-6 flex items-center justify-between">
+<header class="bg-white shadow-md flex pr-4 items-center justify-between">
   <!-- Logo -->
   <div class="flex items-center space-x-4">
     <a href="index.php"><img src="https://shrigangaherbal.com/assets/logo-new-DYO2f-fG.png" style="height:8rem;" alt="logo" class="h-24 w-auto"></a>

@@ -1,64 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include("include/title.php") ?>
 
-  <?php include("include/links.php") ?>
+    <?php include("include/links.php") ?>
 </head>
-<body class="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]
-">
 
-  <!-- Header -->
-  <?php include("include/header.php") ?>
+<body class="sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
 
-  <!-- Main Contact Section -->
-  <main class="max-w-6xl mx-auto px-4 py-12 space-y-12">
 
-    <!-- Contact Heading -->
-    <section class="text-center">
-      <h3 class="text-2xl font-bold text-green-600">CONTACT US</h3>
-      <div class="w-16 h-1 bg-green-600 mx-auto mt-2"></div>
-    </section>
+    <!-- Header -->
+    <?php include("include/header.php") ?>
 
-    <!-- Contact Info & Image -->
-    <section class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 rounded-lg shadow-lg">
-      
-      <!-- Image -->
-      <img src="https://static.vecteezy.com/system/resources/thumbnails/060/705/571/small/traditional-mortar-and-pestle-for-grinding-ingredients-photo.jpeg" alt="contact image" class="w-full md:w-1/2 rounded-lg shadow-lg object-cover">
+    <!-- Main Contact Section -->
+    <main class="max-w-6xl mx-auto px-4 py-12 space-y-12">
 
-      <!-- Info -->
-      <div class="md:w-1/2 space-y-6 text-gray-700">
-        <div>
-          <h3 class="text-xl font-semibold text-green-600 mb-2">Our Store</h3>
-          <div class="space-y-1">
-            <p>34998 Willms Station</p>
-            <p>Suite 35, Washington, USA</p>
-          </div>
-          <div class="space-y-1 mt-2">
-            <p>Tel: (415) 555-0132</p>
-            <p>Email: admin@forever.com</p>
-          </div>
-        </div>
+        <!-- Contact Heading -->
+        <section class="text-center">
+            <h3 class="text-2xl font-bold text-green-600">CONTACT US</h3>
+            <div class="w-16 h-1 bg-green-600 mx-auto mt-2"></div>
+        </section>
 
-        <div>
-          <h3 class="text-xl font-semibold text-green-600 mb-2">Careers at Forever</h3>
-          <p>Learn more about our teams and job openings</p>
-          <button class="mt-2 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
-            Explore Jobs
-          </button>
-        </div>
-      </div>
-    </section>
+        <!-- Contact Info & Image -->
+        <section class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 rounded-lg shadow-lg">
 
-  </main>
+            <!-- Image -->
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/060/705/571/small/traditional-mortar-and-pestle-for-grinding-ingredients-photo.jpeg"
+                alt="contact image" class="w-full md:w-1/2 rounded-lg shadow-lg object-cover">
 
-  <!-- Subscribe Section -->
-  <?php include("include/subscribe.php") ?>
+            <!-- Info -->
+            <div class="md:w-1/2 space-y-6 text-gray-700">
+                <div>
+                    <h3 class="text-xl font-semibold text-green-600 mb-2">Our Store</h3>
+                    <div class="space-y-1">
+                        <p>34998 Willms Station</p>
+                        <p>Suite 35, Washington, USA</p>
+                    </div>
+                    <div class="space-y-1 mt-2">
+                        <p>Tel: (415) 555-0132</p>
+                        <p>Email: admin@forever.com</p>
+                    </div>
+                </div>
 
-  <!-- Footer -->
-  <?php include("include/footer.php") ?>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Subscribe Section -->
+    <?php include("include/subscribe.php") ?>
+
+    <!-- Footer -->
+    <?php include("include/footer.php") ?>
 
 </body>
+
 </html>
