@@ -58,11 +58,11 @@
             </div>
 
             <!-- Mobile Top Bar -->
-            <div id="mobileTop" class="md:hidden mb-6 bg-white p-4 rounded-lg shadow flex justify-between items-center gap-4">
-                <h1 class="text-xl w-fit font-bold">ALL COLLECTION</h1>
-                <div class="flex items-center gap-4">
+            <div id="mobileTop" class="md:hidden mb-6 bg-white p-4 rounded-lg shadow flex flex-col justify-between gap-4">
+                <h1 class="text-xl font-bold">ALL COLLECTION</h1>
+                <div class="flex items-center justify-between gap-4">
                     <select id="mobileSortSelect"
-                        class="border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-green-600">
+                        class="border border-gray-300 w-[50%]  p-2 rounded focus:outline-none focus:ring-2 focus:ring-green-600">
                         <option value="">Sort By:</option>
                         <option value="priceLow">Price: Low to High</option>
                         <option value="priceHigh">Price: High to Low</option>
@@ -71,21 +71,41 @@
                     </select>
 
                     <!-- Mobile Filters (Collapsible) -->
-                    <div class="relative">
-                        <button id="toggleFilters" class="px-2 py-1 border rounded flex items-center gap-1">
-                            Filters <span id="filterArrow">▼</span>
-                        </button>
-                        <div id="mobileFilters"
-                            class="hidden absolute left-0 top-full mt-2 p-4 rounded bg-white shadow flex flex-col gap-2 z-50 w-48">
-                            <!-- JS will inject checkboxes here -->
-                        </div>
-                    </div>
+                    <div class="relative w-[50%]">
+  <button id="toggleFilters" 
+          class="border border-gray-300 w-full py-2 border rounded flex justify-between items-center gap-1">
+    Filters 
+    <i id="filterArrow" class="fa-solid fa-angle-down"></i>
+  </button>
+
+  <div id="mobileFilters"
+       class="hidden absolute left-0 top-full mt-2 p-4 rounded bg-white shadow flex flex-col gap-2 z-50 w-48">
+    <!-- JS will inject checkboxes here -->
+  </div>
+</div>
+
                 </div>
             </div>
 
             <!-- Products Grid -->
             <div id="productsGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 <div class="product-card bg-white p-4 rounded-lg shadow hover:shadow-lg transition" data-category="oil"
+                    data-price="100" data-name="Himalayan Ghutno ke Dard Grice ki Fanki">
+                    <a href="product.php?id=1">
+                        <img src="https://shrigangaherbal.com/assets/p_img59-BApsG3fC.png" alt="product"
+                            class="w-full h-40 object-contain mb-3">
+                        <p class="font-semibold">Himalayan Ghutno ke Dard Grice ki Fanki</p>
+                        <p class="text-green-600 font-bold">&#8377; 100</p>
+                    </a>
+                </div><div class="product-card bg-white p-4 rounded-lg shadow hover:shadow-lg transition" data-category="oil"
+                    data-price="100" data-name="Himalayan Ghutno ke Dard Grice ki Fanki">
+                    <a href="product.php?id=1">
+                        <img src="https://shrigangaherbal.com/assets/p_img59-BApsG3fC.png" alt="product"
+                            class="w-full h-40 object-contain mb-3">
+                        <p class="font-semibold">Himalayan Ghutno ke Dard Grice ki Fanki</p>
+                        <p class="text-green-600 font-bold">&#8377; 100</p>
+                    </a>
+                </div><div class="product-card bg-white p-4 rounded-lg shadow hover:shadow-lg transition" data-category="oil"
                     data-price="100" data-name="Himalayan Ghutno ke Dard Grice ki Fanki">
                     <a href="product.php?id=1">
                         <img src="https://shrigangaherbal.com/assets/p_img59-BApsG3fC.png" alt="product"
@@ -138,13 +158,22 @@
 
         // Toggle mobile filters
         const toggleBtn = document.getElementById("toggleFilters");
-        const mobileFilters = document.getElementById("mobileFilters");
-        const filterArrow = document.getElementById("filterArrow");
+const mobileFilters = document.getElementById("mobileFilters");
+const filterArrow = document.getElementById("filterArrow");
 
-        toggleBtn.addEventListener("click", () => {
-            mobileFilters.classList.toggle("hidden");
-            filterArrow.textContent = mobileFilters.classList.contains("hidden") ? "▼" : "▲";
-        });
+toggleBtn.addEventListener("click", () => {
+  mobileFilters.classList.toggle("hidden");
+
+  // Toggle between angle-down and angle-up
+  if (mobileFilters.classList.contains("hidden")) {
+    filterArrow.classList.remove("fa-angle-up");
+    filterArrow.classList.add("fa-angle-down");
+  } else {
+    filterArrow.classList.remove("fa-angle-down");
+    filterArrow.classList.add("fa-angle-up");
+  }
+});
+
 
         // Clone desktop filters into mobile
         const desktopFilters = document.querySelector("#filterDiv .flex-col");

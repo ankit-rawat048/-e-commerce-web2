@@ -18,9 +18,9 @@
           w-40 sm:w-44 md:w-48 lg:w-52">
                 <img src="https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png" alt="product"
                     class="w-full h-40 object-contain mb-3">
-                <p class="font-semibold text-xs sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose Cream
+                <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose Cream
                 </p>
-                <p class="text-green-600 font-bold text-xs sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
+                <p class="text-green-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
             </a>
 
             <!-- Product 2 -->
@@ -28,9 +28,9 @@
           w-40 sm:w-44 md:w-48 lg:w-52">
                 <img src="https://shrigangaherbal.com/assets/p_img65-jtLWbZUI.png" alt="product"
                     class="w-full h-40 object-contain mb-3">
-                <p class="font-semibold text-xs sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose Cream
+                <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose Cream
                 </p>
-                <p class="text-green-600 font-bold text-xs sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
+                <p class="text-green-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
             </a>
 
 
@@ -39,9 +39,9 @@
           w-40 sm:w-44 md:w-48 lg:w-52">
                 <img src="https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png" alt="product"
                     class="w-full h-40 object-contain mb-3">
-                <p class="font-semibold text-xs sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose Cream
+                <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose Cream
                 </p>
-                <p class="text-green-600 font-bold text-xs sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
+                <p class="text-green-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
             </a>
 
 
@@ -50,9 +50,9 @@
           w-40 sm:w-44 md:w-48 lg:w-52">
                 <img src="https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png" alt="product"
                     class="w-full h-40 object-contain mb-3">
-                <p class="font-semibold text-xs sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose Cream
+                <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose Cream
                 </p>
-                <p class="text-green-600 font-bold text-xs sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
+                <p class="text-green-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
             </a>
 
 
@@ -61,9 +61,9 @@
           w-40 sm:w-44 md:w-48 lg:w-52">
                 <img src="https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png" alt="product"
                     class="w-full h-40 object-contain mb-3">
-                <p class="font-semibold text-xs sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose Cream
+                <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose Cream
                 </p>
-                <p class="text-green-600 font-bold text-xs sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
+                <p class="text-green-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
             </a>
 
 
@@ -72,9 +72,9 @@
           w-40 sm:w-44 md:w-48 lg:w-52">
                 <img src="https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png" alt="product"
                     class="w-full h-40 object-contain mb-3">
-                <p class="font-semibold text-xs sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose Cream
+                <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose Cream
                 </p>
-                <p class="text-green-600 font-bold text-xs sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
+                <p class="text-green-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
             </a>
             
         </div>
@@ -107,9 +107,9 @@
           w-40 sm:w-44 md:w-48 lg:w-52">
                 <img src="https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png" alt="product"
                     class="w-full h-40 object-contain mb-3">
-                <p class="font-semibold text-xs sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose Cream
+                <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose Cream
                 </p>
-                <p class="text-green-600 font-bold text-xs sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
+                <p class="text-green-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
             </a>
 
             <!-- Product 2 -->
@@ -117,9 +117,9 @@
           w-40 sm:w-44 md:w-48 lg:w-52">
                 <img src="https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png" alt="product"
                     class="w-full h-40 object-contain mb-3">
-                <p class="font-semibold text-xs sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose Cream
+                <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose Cream
                 </p>
-                <p class="text-green-600 font-bold text-xs sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
+                <p class="text-green-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
             </a>
 
 
@@ -128,9 +128,9 @@
           w-40 sm:w-44 md:w-48 lg:w-52">
                 <img src="https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png" alt="product"
                     class="w-full h-40 object-contain mb-3">
-                <p class="font-semibold text-xs sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose Cream
+                <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose Cream
                 </p>
-                <p class="text-green-600 font-bold text-xs sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
+                <p class="text-green-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
             </a>
 
 
@@ -139,9 +139,9 @@
           w-40 sm:w-44 md:w-48 lg:w-52">
                 <img src="https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png" alt="product"
                     class="w-full h-40 object-contain mb-3">
-                <p class="font-semibold text-xs sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose Cream
+                <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose Cream
                 </p>
-                <p class="text-green-600 font-bold text-xs sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
+                <p class="text-green-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
             </a>
 
 
@@ -150,9 +150,9 @@
           w-40 sm:w-44 md:w-48 lg:w-52">
                 <img src="https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png" alt="product"
                     class="w-full h-40 object-contain mb-3">
-                <p class="font-semibold text-xs sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose Cream
+                <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose Cream
                 </p>
-                <p class="text-green-600 font-bold text-xs sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
+                <p class="text-green-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
             </a>
 
 
@@ -161,9 +161,9 @@
           w-40 sm:w-44 md:w-48 lg:w-52">
                 <img src="https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png" alt="product"
                     class="w-full h-40 object-contain mb-3">
-                <p class="font-semibold text-xs sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose Cream
+                <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose Cream
                 </p>
-                <p class="text-green-600 font-bold text-xs sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
+                <p class="text-green-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
             </a>
 
 
@@ -197,9 +197,9 @@
           w-40 sm:w-44 md:w-48 lg:w-52">
                 <img src="https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png" alt="product"
                     class="w-full h-40 object-contain mb-3">
-                <p class="font-semibold text-xs sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose
+                <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose
                     Cream</p>
-                <p class="text-green-600 font-bold text-xs sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
+                <p class="text-green-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
             </a>
 
             <!-- Product 2 -->
@@ -207,9 +207,9 @@
           w-40 sm:w-44 md:w-48 lg:w-52">
                 <img src="https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png" alt="product"
                     class="w-full h-40 object-contain mb-3">
-                <p class="font-semibold text-xs sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose
+                <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose
                     Cream</p>
-                <p class="text-green-600 font-bold text-xs sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
+                <p class="text-green-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
             </a>
 
 
@@ -218,9 +218,9 @@
           w-40 sm:w-44 md:w-48 lg:w-52">
                 <img src="https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png" alt="product"
                     class="w-full h-40 object-contain mb-3">
-                <p class="font-semibold text-xs sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose
+                <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose
                     Cream</p>
-                <p class="text-green-600 font-bold text-xs sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
+                <p class="text-green-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
             </a>
 
 
@@ -229,9 +229,9 @@
           w-40 sm:w-44 md:w-48 lg:w-52">
                 <img src="https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png" alt="product"
                     class="w-full h-40 object-contain mb-3">
-                <p class="font-semibold text-xs sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose
+                <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose
                     Cream</p>
-                <p class="text-green-600 font-bold text-xs sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
+                <p class="text-green-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
             </a>
 
 
@@ -240,9 +240,9 @@
           w-40 sm:w-44 md:w-48 lg:w-52">
                 <img src="https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png" alt="product"
                     class="w-full h-40 object-contain mb-3">
-                <p class="font-semibold text-xs sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose
+                <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose
                     Cream</p>
-                <p class="text-green-600 font-bold text-xs sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
+                <p class="text-green-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
             </a>
 
 
@@ -251,9 +251,9 @@
           w-40 sm:w-44 md:w-48 lg:w-52">
                 <img src="https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png" alt="product"
                     class="w-full h-40 object-contain mb-3">
-                <p class="font-semibold text-xs sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose
+                <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose
                     Cream</p>
-                <p class="text-green-600 font-bold text-xs sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
+                <p class="text-green-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
             </a>
 
         </div>

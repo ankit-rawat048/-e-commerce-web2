@@ -34,6 +34,20 @@ $products = [
         'description' => 'Pure Shilajit paste for energy and vitality.',
         'categories' => 'paste'
     ],
+    5 => [
+        'name' => 'Nidco Shilajit Paste',
+        'price' => 200,
+        'image' => 'https://shrigangaherbal.com/assets/p_img62-D0zloGw6.png',
+        'description' => 'Pure Shilajit paste for energy and vitality.',
+        'categories' => 'paste'
+    ],
+    6 => [
+        'name' => 'Nidco Shilajit Paste',
+        'price' => 200,
+        'image' => 'https://shrigangaherbal.com/assets/p_img62-D0zloGw6.png',
+        'description' => 'Pure Shilajit paste for energy and vitality.',
+        'categories' => 'paste'
+    ],
 ];
 
 // Check if product exists
