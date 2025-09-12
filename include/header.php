@@ -1,28 +1,37 @@
 <header class="bg-white shadow-md flex pr-4 items-center justify-between">
   <!-- Logo -->
   <div class="flex items-center space-x-4">
-    <a href="index.php"><img src="https://shrigangaherbal.com/assets/logo-new-DYO2f-fG.png" style="height:8rem;" alt="logo" class="h-24 w-auto"></a>
-</div>
-
+    <a href="index.php">
+      <img src="https://shrigangaherbal.com/assets/logo-new-DYO2f-fG.png" alt="logo" class="h-24 w-auto">
+    </a>
+  </div>
 
   <!-- Desktop Navigation Links -->
   <ul class="hidden md:flex space-x-6 text-gray-700 font-semibold items-center">
+    <?php include("links.php"); ?>
     <li><a href="index.php" class="hover:text-green-600">HOME</a></li>
     <li><a href="collection.php" class="hover:text-green-600">COLLECTION</a></li>
     <li><a href="about.php" class="hover:text-green-600">ABOUT</a></li>
     <li><a href="contact.php" class="hover:text-green-600">CONTACT</a></li>
   </ul>
 
-  <!-- Desktop Icons
+  <!-- Desktop Icons -->
   <div class="hidden md:flex space-x-4 text-gray-700 text-xl items-center">
+    <!-- Search Button -->
+    <button id="searchBtn" class="hover:text-green-600 cursor-pointer">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
     <a href="signup.php"><i class="fa-regular fa-user hover:text-green-600 cursor-pointer"></i></a>
     <a href="cart.php"><i class="fa-solid fa-bag-shopping hover:text-green-600 cursor-pointer"></i></a>
-  </div> -->
+  </div>
 
-  <!-- Mobile Hamburger Icon -->
+  <!-- Mobile Icons -->
   <div class="md:hidden flex items-center space-x-4">
-    <!-- <a href="signup.php"><i class="fa-regular fa-user text-gray-700 text-xl hover:text-green-600 cursor-pointer"></i></a>
-    <a href="cart.php"><i class="fa-solid fa-bag-shopping text-gray-700 text-xl hover:text-green-600 cursor-pointer"></i></a> -->
+    <!-- Mobile Search Button -->
+    <button id="mobileSearchBtn" class="text-gray-700">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+    <!-- Mobile Menu Toggle -->
     <button id="menu-btn" class="focus:outline-none">
       <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg">
@@ -40,6 +49,8 @@
   <a href="about.php" class="block text-gray-700 font-semibold hover:text-green-600">ABOUT</a>
   <a href="contact.php" class="block text-gray-700 font-semibold hover:text-green-600">CONTACT</a>
 </nav>
+
+<?php include("searchButton.php"); ?> <!-- 🔹 Single include for popup search box -->
 
 <script>
   // Toggle mobile menu

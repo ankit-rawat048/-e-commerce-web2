@@ -35,16 +35,30 @@ $products = [
         'categories' => 'paste'
     ],
     5 => [
-        'name' => 'Nidco Shilajit Paste',
+        'name' => 'Kailash Jeevan MultiPurpose Cream',
         'price' => 200,
-        'image' => 'https://shrigangaherbal.com/assets/p_img62-D0zloGw6.png',
+        'image' => 'https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png',
         'description' => 'Pure Shilajit paste for energy and vitality.',
         'categories' => 'paste'
     ],
     6 => [
-        'name' => 'Nidco Shilajit Paste',
+        'name' => 'Nidco Shilajeet Tablet',
         'price' => 200,
-        'image' => 'https://shrigangaherbal.com/assets/p_img62-D0zloGw6.png',
+        'image' => 'https://shrigangaherbal.com/assets/p_img64-C8_eQaK1.png',
+        'description' => 'Pure Shilajit paste for energy and vitality.',
+        'categories' => 'paste'
+    ],
+    7 => [
+        'name' => 'Kesri Marham',
+        'price' => 200,
+        'image' => 'https://shrigangaherbal.com/assets/p_img65-jtLWbZUI.png',
+        'description' => 'Pure Shilajit paste for energy and vitality.',
+        'categories' => 'paste'
+    ],
+    8 => [
+        'name' => 'Herbal Product 8',
+        'price' => 200,
+        'image' => 'https://shrigangaherbal.com/assets/p_img55-BB5qRI_o.png',
         'description' => 'Pure Shilajit paste for energy and vitality.',
         'categories' => 'paste'
     ],

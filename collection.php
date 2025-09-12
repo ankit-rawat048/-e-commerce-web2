@@ -73,7 +73,7 @@
                     <!-- Mobile Filters (Collapsible) -->
                     <div class="relative w-[50%]">
   <button id="toggleFilters" 
-          class="border border-gray-300 w-full py-2 border rounded flex justify-between items-center gap-1">
+          class="border border-gray-300 w-full px-2 py-2 border rounded flex justify-between items-center gap-1">
     Filters 
     <i id="filterArrow" class="fa-solid fa-angle-down"></i>
   </button>
