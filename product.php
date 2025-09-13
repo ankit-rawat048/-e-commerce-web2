@@ -71,23 +71,61 @@ if (!$product) {
     exit;
 }
 
-// // Category colors
-// $categoryColors = [
-//   'oil' => 'bg-yellow-500',
-//   'balm' => 'bg-red-500',
-//   'tea' => 'bg-green-500',
-//   'paste' => 'bg-orange-500'
-// ];
+// Category class
+$categoryColors = [
+    'oil' => 'bg-yellow-500',
+    'balm' => 'bg-red-500',
+    'tea' => 'bg-green-500',
+    'paste' => 'bg-orange-500'
+];
+
 $catClass = $categoryColors[$product['categories']] ?? 'bg-gray-400';
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans:wght@400;600&family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+
     <?php include("include/title.php") ?>
     <?php include("include/links.php") ?>
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1, h2, h3, .font-bold {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        h1, h2, .font-semibold {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .product-div {
+            border: 2px solid gray;
+            background-color: #e5e5e5;
+            padding: 20px;
+        }
+
+        .image-section {
+            background-color: #f5f5f5;
+        }
+
+        .add-to-cart-btn {
+            background-color: #FF9800;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #FB8C00;
+        }
+    </style>
 </head>
 
 <body class="sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
@@ -95,11 +133,11 @@ $catClass = $categoryColors[$product['categories']] ?? 'bg-gray-400';
     <?php include("include/header.php") ?>
 
     <!-- Product Details -->
-    <div class="max-w-5xl mx-auto p-4 sm:p-6 mt-10">
+    <div class="max-w-5xl mx-auto p-4 sm:p-6 mt-10 product-div">
         <div class="flex flex-col md:flex-row gap-8">
 
             <!-- Product Image -->
-            <div class="md:w-1/2">
+            <div class="md:w-1/2 image-section">
                 <img src="<?php echo $product['image']; ?>" alt="<?php echo $product['name']; ?>"
                     class="w-full h-64 sm:h-80 md:h-[350px] object-contain rounded">
             </div>
@@ -114,18 +152,15 @@ $catClass = $categoryColors[$product['categories']] ?? 'bg-gray-400';
                         <?php echo $product['name']; ?>
                     </h1>
 
-                    <div
-                        class="<?php echo $catClass; ?> text-white font-bold bg-gray-400 uppercase px-4 py-2 rounded-lg shadow cursor-pointer lg:mt-2">
+                    <div class="<?php echo $catClass; ?> text-white font-bold bg-gray-400 uppercase px-4 py-2 rounded-lg shadow cursor-pointer lg:mt-2">
                         <?php echo $product['categories']; ?>
                     </div>
 
                 </div>
 
-
                 <!-- Price -->
                 <p class="text-2xl sm:text-3xl font-semibold text-green-600 mb-4 price-display">
-                    &#8377;
-                    <?php echo $product['price']; ?>
+                    &#8377; <?php echo $product['price']; ?>
                 </p>
 
                 <!-- Description -->
@@ -152,10 +187,8 @@ $catClass = $categoryColors[$product['categories']] ?? 'bg-gray-400';
                     <input type="hidden" name="image" value="<?php echo $product['image']; ?>">
                     <input type="hidden" name="weight" value="23g">
 
-                    <!-- <input type="number" name="quantity" value="1" min="1" class="border px-2 py-1 w-20 rounded"> -->
-
                     <button type="submit" name="add_to_cart"
-                        class="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition">
+                        class="add-to-cart-btn text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition">
                         Add to Cart
                     </button>
                 </form>
@@ -183,12 +216,8 @@ $catClass = $categoryColors[$product['categories']] ?? 'bg-gray-400';
             <a href="product.php?id=<?php echo $id; ?>"
                 class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
                 <img src="<?php echo $prod['image']; ?>" alt="product" class="w-full h-40 object-contain mb-3">
-                <p class="font-semibold">
-                    <?php echo $prod['name']; ?>
-                </p>
-                <p class="text-green-600 font-bold">&#8377;
-                    <?php echo $prod['price']; ?>
-                </p>
+                <p class="font-semibold"><?php echo $prod['name']; ?></p>
+                <p class="text-green-600 font-semibold">&#8377; <?php echo $prod['price']; ?></p>
             </a>
             <?php endif; ?>
             <?php endforeach; ?>
@@ -196,31 +225,6 @@ $catClass = $categoryColors[$product['categories']] ?? 'bg-gray-400';
     </div>
 
     <?php include("include/footer.php") ?>
-<script>
-    const proQuantity = document.getElementById("proQuan");
-    const priceDisplay = document.querySelector(".price-display");
-    const priceInput = document.querySelector("input[name='price']");
-    const weightInput = document.querySelector("input[name='weight']");
-
-    const priceMap = {
-        "1": <?php echo $product['price']; ?>,
-        "2": <?php echo $product['price'] + 100; ?>,
-        "3": <?php echo $product['price'] + 200; ?>
-    };
-
-    const weightMap = {
-        "1": "23g",
-        "2": "50g",
-        "3": "100g"
-    };
-
-    proQuantity.addEventListener("change", () => {
-        const selected = proQuantity.value;
-        priceDisplay.textContent = "₹ " + priceMap[selected];
-        priceInput.value = priceMap[selected];
-        weightInput.value = weightMap[selected];
-    });
-</script>
 
 </body>
 

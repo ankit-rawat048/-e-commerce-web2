@@ -4,7 +4,8 @@
          p-4 sm:p-[6vh] md:p-[10vh] lg:p-[12vh]">
 
   <div id="searchBox"
-    class="bg-white w-[600px] lg:max-w-[90%] sm:max-w-[100%] rounded-xl shadow-xl p-6 transform scale-95 opacity-0 transition-all duration-300">
+    class="bg-white w-[600px] lg:max-w-[90%] sm:max-w-[100%] rounded-xl shadow-xl
+     p-6 transform scale-95 opacity-0 transition-all duration-300">
 
     <!-- Search Input -->
     <div class="flex items-center space-x-3 border-b pb-3 mb-4">

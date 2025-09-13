@@ -200,50 +200,6 @@
         }
 
 
-        // search button logic
-         const searchBtn = document.getElementById("searchBtn");
-    const searchOverlay = document.getElementById("searchOverlay");
-    const searchBox = document.getElementById("searchBox");
-    const closeSearch = document.getElementById("closeSearch");
-
-    // Function to open popup
-    function openSearch() {
-      searchOverlay.classList.remove("hidden");
-      setTimeout(() => {
-        searchBox.classList.remove("opacity-0", "scale-95");
-        searchBox.classList.add("opacity-100", "scale-100");
-      }, 50);
-    }
-
-    // Function to close popup
-    function closePopup() {
-      searchBox.classList.add("opacity-0", "scale-95");
-      searchBox.classList.remove("opacity-100", "scale-100");
-      setTimeout(() => {
-        searchOverlay.classList.add("hidden");
-      }, 300);
-    }
-
-    // Open
-    searchBtn.addEventListener("click", openSearch);
-
-    // Close (button)
-    closeSearch.addEventListener("click", closePopup);
-
-    // Close (overlay click)
-    searchOverlay.addEventListener("click", (e) => {
-      if (e.target === searchOverlay) {
-        closePopup();
-      }
-    });
-
-    // Close (Esc key)
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && !searchOverlay.classList.contains("hidden")) {
-        closePopup();
-      }
-    });
-
 
     </script>
 
