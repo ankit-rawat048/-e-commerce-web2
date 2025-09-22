@@ -15,7 +15,7 @@
     <?php include("include/header.php") ?>
 
     <!-- Main Content -->
-    <main class="max-w-6xl mx-auto px-4 py-12 space-y-12">
+    <main class="max-w-6xl mx-auto py-12 space-y-12">
 
         <!-- About Section -->
         <section class="text-center">
@@ -28,7 +28,7 @@
             <img src="https://shrigangaherbal.com/assets/logo-new-DYO2f-fG.png" alt="aboutImg"
                 class="w-full md:w-1/2 object-cover">
 
-            <div class="md:w-1/2 space-y-4 text-gray-700">
+            <div class="md:w-1/2 space-y-4 px-[1rem] text-gray-700">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda natus excepturi doloribus
                     voluptates repellendus optio doloremque earum mollitia alias voluptatibus maxime obcaecati, odio
                     labore. Dolorum quas illo enim aliquam optio dolor vero fuga, corrupti expedita odio beatae quae

@@ -152,7 +152,7 @@ $catClass = $categoryColors[$product['categories']] ?? 'bg-gray-400';
 
                 <!-- Price -->
                 <p id="priceDisplay" 
-                   class="text-2xl sm:text-3xl font-semibold text-green-600 mb-4 price-display"
+                   class="text-2xl sm:text-3xl font-semibold text-orange-600 mb-4 price-display"
                    data-base-price="<?php echo $product['price']; ?>">
                     &#8377; <?php echo $product['price']; ?>
                 </p>
