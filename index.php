@@ -34,38 +34,45 @@
             <!-- <p class="text-gray-600 mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias sed nulla tenetur esse, quas quasi. Incidunt, fuga voluptatum.</p> -->
 
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
-                <a href="product.php?id=1" class="bg-white p-3 sm:p-4 md:p-4 lg:p-5 rounded-lg shadow hover:shadow-lg transition flex-shrink-0 
+                <a href="product.php?id=1" class="bg-white border-2 border-green-600 h-full p-3 sm:p-4 md:p-4 lg:p-5 rounded-lg shadow hover:shadow-lg transition flex-shrink-0 
           w-40 sm:w-44 md:w-48 lg:w-52">
                 <img src="https://shrigangaherbal.com/assets/p_img59-BApsG3fC.png" alt="product"
-                    class="w-full h-40 object-contain mb-3">
+                    class="w-full border-2 border-blue-600 h-40 object-contain mb-3">
+                    <hr class="w-full border-2 border-orange-600">
                 <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Himalayan Ghutno ke Dard Grice ki Fanki
                     Cream</p>
-                <p class="text-green-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 100</p>
+                <p class="text-orange-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 100</p>
             </a>
 
-                <a href="product.php?id=2" class="bg-white p-3 sm:p-4 md:p-4 lg:p-5 rounded-lg shadow hover:shadow-lg transition flex-shrink-0 
+                <a href="product.php?id=2" class="bg-white border-2 border-green-600 h-full p-3 sm:p-4 md:p-4 lg:p-5 rounded-lg shadow hover:shadow-lg transition flex-shrink-0 
           w-40 sm:w-44 md:w-48 lg:w-52">
                 <img src="https://shrigangaherbal.com/assets/p_img60-D3dQvT_e.png" alt="product"
-                    class="w-full h-40 object-contain mb-3">
+                    class="w-full border-2 border-blue-600 h-40 object-contain mb-3">
+                    <hr class="w-full border-2 border-orange-600">
+                    
                 <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Hari Ganga Balm</p>
-                <p class="text-green-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 200</p>
+                <p class="text-orange-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 200</p>
             </a>
 
 
-                <a href="product.php?id=3" class="bg-white p-3 sm:p-4 md:p-4 lg:p-5 rounded-lg shadow hover:shadow-lg transition flex-shrink-0 
+                <a href="product.php?id=3" class="bg-white border-2 border-green-600 h-full p-3 sm:p-4 md:p-4 lg:p-5 rounded-lg shadow hover:shadow-lg transition flex-shrink-0 
           w-40 sm:w-44 md:w-48 lg:w-52">
                 <img src="https://shrigangaherbal.com/assets/p_img61-BAipXeaP.png" alt="product"
-                    class="w-full h-40 object-contain mb-3">
+                    class="w-full border-2 border-blue-600 h-40 object-contain mb-3">
+                    <hr class="w-full border-2 border-orange-600">
+
                 <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Samahan Herbal Tea</p>
-                <p class="text-green-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 200</p>
+                <p class="text-orange-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 200</p>
             </a>
 
-            <a href="product.php?id=4" class="bg-white p-3 sm:p-4 md:p-4 lg:p-5 rounded-lg shadow hover:shadow-lg transition flex-shrink-0 
+            <a href="product.php?id=4" class="bg-white border-2 border-green-600 h-full p-3 sm:p-4 md:p-4 lg:p-5 rounded-lg shadow hover:shadow-lg transition flex-shrink-0 
           w-40 sm:w-44 md:w-48 lg:w-52">
                 <img src="https://shrigangaherbal.com/assets/p_img62-D0zloGw6.png" alt="product"
-                    class="w-full h-40 object-contain mb-3">
+                    class="w-full border-2 border-blue-600 h-40 object-contain mb-3">
+                    <hr class="w-full border-2 border-orange-600">
+
                 <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Nidco Shilajit Paste</p>
-                <p class="text-green-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 200</p>
+                <p class="text-orange-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 200</p>
             </a>
             </div>
         </div>
@@ -81,40 +88,48 @@
             <!-- <p class="text-gray-600 mb-10">Discover our top-selling products loved by our customers.</p> -->
 
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
-                <a href="product.php?id=5" class="bg-white p-3 sm:p-4 md:p-4 lg:p-5 rounded-lg shadow hover:shadow-lg transition flex-shrink-0 
+                <a href="product.php?id=5" class="bg-white border-2 border-green-600 p-3 sm:p-4 md:p-4 lg:p-5 rounded-lg shadow hover:shadow-lg transition flex-shrink-0 
           w-40 sm:w-44 md:w-48 lg:w-52">
                 <img src="https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png" alt="product"
-                    class="w-full h-40 object-contain mb-3">
+                    class="w-full border-2 border-blue-600 h-40 object-contain mb-3">
+                    <hr class="w-full border-2 border-orange-600">
+
                 <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose
                     Cream</p>
-                <p class="text-green-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
+                <p class="text-orange-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
             </a>
 
-                <a href="product.php?id=5" class="bg-white p-3 sm:p-4 md:p-4 lg:p-5 rounded-lg shadow hover:shadow-lg transition flex-shrink-0 
+                <a href="product.php?id=5" class="bg-white border-2 border-green-600 p-3 sm:p-4 md:p-4 lg:p-5 rounded-lg shadow hover:shadow-lg transition flex-shrink-0 
           w-40 sm:w-44 md:w-48 lg:w-52">
                 <img src="https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png" alt="product"
-                    class="w-full h-40 object-contain mb-3">
+                    class="w-full border-2 border-blue-600 h-40 object-contain mb-3">
+                    <hr class="w-full border-2 border-orange-600">
+
                 <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose
                     Cream</p>
-                <p class="text-green-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
+                <p class="text-orange-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
             </a>
 
-                <a href="product.php?id=5" class="bg-white p-3 sm:p-4 md:p-4 lg:p-5 rounded-lg shadow hover:shadow-lg transition flex-shrink-0 
+                <a href="product.php?id=5" class="bg-white border-2 border-green-600 p-3 sm:p-4 md:p-4 lg:p-5 rounded-lg shadow hover:shadow-lg transition flex-shrink-0 
           w-40 sm:w-44 md:w-48 lg:w-52">
                 <img src="https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png" alt="product"
-                    class="w-full h-40 object-contain mb-3">
+                    class="w-full border-2 border-blue-600 h-40 object-contain mb-3">
+                    <hr class="w-full border-2 border-orange-600">
+
                 <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose
                     Cream</p>
-                <p class="text-green-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
+                <p class="text-orange-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
             </a>
 
-                <a href="product.php?id=5" class="bg-white p-3 sm:p-4 md:p-4 lg:p-5 rounded-lg shadow hover:shadow-lg transition flex-shrink-0 
+                <a href="product.php?id=5" class="bg-white border-2 border-green-600 p-3 sm:p-4 md:p-4 lg:p-5 rounded-lg shadow hover:shadow-lg transition flex-shrink-0 
           w-40 sm:w-44 md:w-48 lg:w-52">
                 <img src="https://shrigangaherbal.com/assets/p_img63-C5T-AwaF.png" alt="product"
-                    class="w-full h-40 object-contain mb-3">
+                    class="w-full border-2 border-blue-600 h-40 object-contain mb-3">
+                    <hr class="w-full border-2 border-orange-600">
+
                 <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose
                     Cream</p>
-                <p class="text-green-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
+                <p class="text-orange-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
             </a>
             </div>
         </div>

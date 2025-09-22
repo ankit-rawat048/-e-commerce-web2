@@ -54,27 +54,27 @@
       <div class="gallery-wrapper relative w-full overflow-hidden max-w-7xl mx-auto">
         <!-- Left Button -->
         <button onclick="scrollGallery(this, -1)"
-          class="absolute left-2 top-1/2 -translate-y-1/2 bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-full z-10 transition duration-300 transform hover:scale-110">
+          class="absolute left-2 top-1/2 text-white px-4 py-3 rounded-full z-10 transition duration-300 transform">
           <i class="fa-solid fa-chevron-left"></i>
         </button>
 
         <!-- Scrollable Gallery -->
-        <div class="gallery flex items-center gap-6 p-4 transition-transform duration-500">
+        <div class="gallery flex gap-6 p-4 transition-transform duration-500">
           ${cat.products.map(p => `
             <a href="product.php?id=${p.id}" 
-              class="product-card bg-white border-2 border-green-300 p-4 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105 flex-shrink-0 w-52 sm:w-56 lg:w-60">
+              class="product-card bg-white border-2 border-green-600 p-4 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105 flex-shrink-0 w-52 sm:w-56 lg:w-60">
               <img src="${p.img}" alt="${p.name}" 
-                class="w-full rounded-lg h-40 object-contain mb-3">
+                class="w-full rounded-lg border-2 border-blue-500 h-40 object-contain mb-3">
               <hr class="border-t-2 border-orange-300 my-4">
               <p class="font-semibold text-lg text-gray-700">${p.name}</p>
-              <p class="text-green-600 font-bold text-xl">₹${p.price}</p>
+              <p class="text-orange-600 font-bold text-xl">₹${p.price}</p>
             </a>
           `).join("")}
         </div>
 
         <!-- Right Button -->
         <button onclick="scrollGallery(this, 1)"
-          class="absolute right-2 top-1/2 bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-full z-10 transition duration-300 transform hover:scale-110">
+          class="absolute right-2 top-1/2 text-white hover:text-gray-300 px-4 py-3 rounded-full z-10 transition duration-300 transform">
           <i class="fa-solid fa-chevron-right"></i>
         </button>
       </div>
@@ -94,12 +94,12 @@
   .gallery-wrapper {
     position: relative;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
   }
 
   .product-card {
-    background-color: #fff;
-    border: 2px solid #4CAF50;
+    /* background-color: #fff; */
+    /* border: 2px solid #4CAF50; */
     padding: 16px;
     border-radius: 10px;
     transition: all 0.3s ease;
@@ -120,8 +120,8 @@
 
   .gallery-wrapper button {
     background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 50%;
-    padding: 12px;
+    /* border-radius: 50%; */
+    /* padding: 12px; */
     font-size: 18px;
     position: absolute;
     top: 50%;
@@ -130,10 +130,10 @@
     z-index: 10;
   }
 
-  .gallery-wrapper button:hover {
+ /* .gallery-wrapper button:hover {
     background-color: rgba(0, 0, 0, 0.6);
     transform: scale(1.1);
-  }
+  }  */
 
   .gallery-wrapper button i {
     color: #fff;
