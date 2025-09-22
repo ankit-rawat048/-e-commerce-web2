@@ -41,7 +41,7 @@
                     <hr class="w-full border-2 border-orange-600">
                 <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Himalayan Ghutno ke Dard Grice ki Fanki
                     Cream</p>
-                <p class="text-orange-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 100</p>
+                <p class="text-orange-600 font-bold sm:text-sm md:text-base lg:text-[1.25rem]">&#8377; 100</p>
             </a>
 
                 <a href="product.php?id=2" class="bg-white border-2 border-green-600 h-full p-3 sm:p-4 md:p-4 lg:p-5 rounded-lg shadow hover:shadow-lg transition flex-shrink-0 
@@ -51,7 +51,7 @@
                     <hr class="w-full border-2 border-orange-600">
                     
                 <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Hari Ganga Balm</p>
-                <p class="text-orange-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 200</p>
+                <p class="text-orange-600 font-bold sm:text-sm md:text-base lg:text-[1.25rem]">&#8377; 200</p>
             </a>
 
 
@@ -62,7 +62,7 @@
                     <hr class="w-full border-2 border-orange-600">
 
                 <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Samahan Herbal Tea</p>
-                <p class="text-orange-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 200</p>
+                <p class="text-orange-600 font-bold sm:text-sm md:text-base lg:text-[1.25rem]">&#8377; 200</p>
             </a>
 
             <a href="product.php?id=4" class="bg-white border-2 border-green-600 h-full p-3 sm:p-4 md:p-4 lg:p-5 rounded-lg shadow hover:shadow-lg transition flex-shrink-0 
@@ -72,7 +72,7 @@
                     <hr class="w-full border-2 border-orange-600">
 
                 <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Nidco Shilajit Paste</p>
-                <p class="text-orange-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 200</p>
+                <p class="text-orange-600 font-bold sm:text-sm md:text-base lg:text-[1.25rem]">&#8377; 200</p>
             </a>
             </div>
         </div>
@@ -96,7 +96,7 @@
 
                 <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose
                     Cream</p>
-                <p class="text-orange-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
+                <p class="text-orange-600 font-bold sm:text-sm md:text-base lg:text-[1.25rem]">&#8377; 150</p>
             </a>
 
                 <a href="product.php?id=5" class="bg-white border-2 border-green-600 p-3 sm:p-4 md:p-4 lg:p-5 rounded-lg shadow hover:shadow-lg transition flex-shrink-0 
@@ -107,7 +107,7 @@
 
                 <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose
                     Cream</p>
-                <p class="text-orange-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
+                <p class="text-orange-600 font-bold sm:text-sm md:text-base lg:text-[1.25rem]e">&#8377; 150</p>
             </a>
 
                 <a href="product.php?id=5" class="bg-white border-2 border-green-600 p-3 sm:p-4 md:p-4 lg:p-5 rounded-lg shadow hover:shadow-lg transition flex-shrink-0 
@@ -118,7 +118,7 @@
 
                 <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose
                     Cream</p>
-                <p class="text-orange-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
+                <p class="text-orange-600 font-bold sm:text-sm md:text-base lg:text-[1.25rem]">&#8377; 150</p>
             </a>
 
                 <a href="product.php?id=5" class="bg-white border-2 border-green-600 p-3 sm:p-4 md:p-4 lg:p-5 rounded-lg shadow hover:shadow-lg transition flex-shrink-0 
@@ -129,7 +129,7 @@
 
                 <p class="font-semibold text-[0.85rem] sm:text-sm md:text-base lg:text-base">Kailash Jeevan MultiPurpose
                     Cream</p>
-                <p class="text-orange-600 font-bold text-1 sm:text-sm md:text-base lg:text-base">&#8377; 150</p>
+                <p class="text-orange-600 font-bold sm:text-sm md:text-base lg:text-[1.25rem]">&#8377; 150</p>
             </a>
             </div>
         </div>

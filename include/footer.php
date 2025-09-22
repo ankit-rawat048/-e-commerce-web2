@@ -1,6 +1,6 @@
 
 <!-- Footer -->
-<footer class="bg-gray-200 text- py-12 sm:px-8">
+<footer class="bg-gray-200 py-12 px-[1rem]">
   <div class="border-b border-black pb-4 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
 
     <!-- About -->
