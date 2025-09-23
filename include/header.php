@@ -2,7 +2,7 @@
   <!-- Logo -->
   <div class="flex items-center space-x-4">
     <a href="index.php">
-      <img src="https://shrigangaherbal.com/assets/logo-new-DYO2f-fG.png" alt="logo" class="h-24 w-auto">
+      <img src="images/logo.png" alt="logo" class="h-24 p-[1rem] w-auto">
     </a>
   </div>
 
@@ -21,7 +21,7 @@
     <button id="searchBtn" class="hover:text-green-600 cursor-pointer">
       <i class="fa-solid fa-magnifying-glass"></i>
     </button>
-    <a href="signup.php"><i class="fa-regular fa-user hover:text-green-600 cursor-pointer"></i></a>
+    <a href="login.php"><i class="fa-regular fa-user hover:text-green-600 cursor-pointer"></i></a>
     <a href="cart.php"><i class="fa-solid fa-bag-shopping hover:text-green-600 cursor-pointer"></i></a>
   </div>
 

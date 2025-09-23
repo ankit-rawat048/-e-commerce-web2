@@ -25,7 +25,7 @@
 
         <!-- Image and Text -->
         <section class="flex flex-col md:flex-row items-center gap-8">
-            <img src="https://shrigangaherbal.com/assets/logo-new-DYO2f-fG.png" alt="aboutImg"
+            <img src="images/logo.png" alt="aboutImg"
                 class="w-full md:w-1/2 object-cover">
 
             <div class="md:w-1/2 space-y-4 px-[1rem] text-gray-700">

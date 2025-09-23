@@ -5,7 +5,7 @@
 
     <!-- About -->
     <div>
-      <img src="https://shrigangaherbal.com/assets/logo-new-DYO2f-fG.png" alt="footer logo" class="h-24 mb-4">
+      <img src="images/logo.png" alt="footer logo" class="h-24 mb-4">
       <p class="text-gray-600 text-sm">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque velit saepe corrupti? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus culpa amet vitae! Assumenda possimus quae ea aliquid voluptatem alias saepe.
       </p>
