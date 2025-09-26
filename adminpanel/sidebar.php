@@ -1,10 +1,28 @@
-<div class="main-div">
-    <h3>For Admin</h3>
-    <hr>
-    <p>Admin Pages -</p>
-    <div>
-        <a href="/dashboard">Dashboard</a>
-        <a href="/aboutproduct">Products</a>
-        <a href="/settings">Settings</a>
+<?php
+$sidebarLinks = [
+    ["label"=>"Dashboard", "href"=>"dashboard.php", "icon"=>"fa-gauge-high"],
+    ["label"=>"Products", "href"=>"products.php", "icon"=>"fa-box-open"],
+    ["label"=>"Orders", "href"=>"orders.php", "icon"=>"fa-cart-shopping"],
+    ["label"=>"Users", "href"=>"users.php", "icon"=>"fa-users"],
+    ["label"=>"Reports", "href"=>"reports.php", "icon"=>"fa-chart-line"],
+    ["label"=>"Settings", "href"=>"settings.php", "icon"=>"fa-gear"],
+    ["label"=>"Logout", "href"=>"logout.php", "icon"=>"fa-right-from-bracket", "class"=>"mt-auto text-red-400 hover:bg-red-600"]
+];
+?>
+<div id="sidebar" class="bg-black text-white w-64 p-4 flex-shrink-0 fixed md:relative top-0 left-0 h-screen transition-transform transform -translate-x-full md:translate-x-0 z-50 flex flex-col">
+    <div class="flex justify-between items-center mb-4">
+        <h3 class="text-lg font-bold">For Admin</h3>
+        <button class="cancelBtn text-white lg:hidden" type="button">X</button>
+    </div>
+    <hr class="border-gray-600 mb-4">
+
+    <div class="flex flex-col gap-2 flex-1">
+        <?php foreach($sidebarLinks as $link): ?>
+            <a href="<?= $link['href'] ?>"
+               class="flex items-center gap-2 px-2 py-2 rounded hover:bg-gray-700 transition-colors <?= $link['class'] ?? '' ?>">
+               <i class="fa-solid <?= $link['icon'] ?>"></i>
+               <?= $link['label'] ?>
+            </a>
+        <?php endforeach; ?>
     </div>
 </div>
