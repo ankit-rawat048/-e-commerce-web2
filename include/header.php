@@ -85,7 +85,23 @@
   });
 </script>
 
+<!-- Fonts & Styles -->
 <style>
+  /* Google Fonts Import */
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap');
+
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .main-title, .title, .hero-title {
+    font-family: 'Montserrat', sans-serif;
+  }
+
   /* Desktop hover dropdown */
   .dropdown-one {
     position: relative;

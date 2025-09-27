@@ -9,7 +9,10 @@ require_once 'include/conn.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayurveda</title>
+
     <?php include("include/links.php") ?>
+
+    
 </head>
 
 <body class="sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
@@ -21,7 +24,7 @@ require_once 'include/conn.php';
     <section id="bgImg" class="bg-green-100 py-20 text-center">
         <div class="max-w-xl mx-auto">
             <p class="text-green-800 font-semibold mb-2">OUR BESTSELLERS</p>
-            <h2 class="text-4xl md:text-5xl font-bold mb-4">Latest Arrival</h2>
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 hero-title">Latest Arrival</h2>
         </div>
     </section>
 
@@ -34,7 +37,7 @@ require_once 'include/conn.php';
     <!-- Categories Page -->
     <section class="py-16 bg-gray-200">
         <div class="max-w-6xl mx-auto lg:px-6">
-            <h1 class="border-b-2 border-black text-center text-3xl font-bold">CATEGORIES</h1>
+            <h1 class="border-b-2 border-black text-center text-3xl font-bold main-title">CATEGORIES</h1>
             <?php include("include/scrollableproduct.php") ?>
         </div>
     </section>

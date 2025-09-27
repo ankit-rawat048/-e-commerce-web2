@@ -9,3 +9,6 @@
 
 <!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="images/logo.ico">
+
+<!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">

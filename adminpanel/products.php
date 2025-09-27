@@ -1,13 +1,23 @@
 <?php
-// Sidebar links (common for all pages)
-$sidebarLinks = [
-    ["label"=>"Dashboard", "href"=>"dashboard.php", "icon"=>"fa-gauge-high"],
-    ["label"=>"Products", "href"=>"products.php", "icon"=>"fa-box-open"],
-    ["label"=>"Orders", "href"=>"orders.php", "icon"=>"fa-cart-shopping"],
-    ["label"=>"Users", "href"=>"users.php", "icon"=>"fa-users"],
-    ["label"=>"Reports", "href"=>"reports.php", "icon"=>"fa-chart-line"],
-    ["label"=>"Settings", "href"=>"settings.php", "icon"=>"fa-gear"],
-    ["label"=>"Logout", "href"=>"logout.php", "icon"=>"fa-right-from-bracket", "class"=>"mt-auto text-red-400 hover:bg-red-600"]
+
+// Example Products (later replace with DB)
+$products = [
+  ["name"=>"Coffee Beans", "category"=>"Beverages", "price"=>25.00, "stock"=>120, "status"=>"In Stock"],
+  ["name"=>"Green Tea", "category"=>"Beverages", "price"=>15.50, "stock"=>80, "status"=>"In Stock"],
+  ["name"=>"Olive Oil", "category"=>"Grocery", "price"=>45.00, "stock"=>30, "status"=>"Low Stock"],
+  ["name"=>"Pasta", "category"=>"Grocery", "price"=>12.00, "stock"=>0, "status"=>"Out of Stock"],  ["name"=>"Coffee Beans", "category"=>"Beverages", "price"=>25.00, "stock"=>120, "status"=>"In Stock"],
+  ["name"=>"Green Tea", "category"=>"Beverages", "price"=>15.50, "stock"=>80, "status"=>"In Stock"],
+  ["name"=>"Olive Oil", "category"=>"Grocery", "price"=>45.00, "stock"=>30, "status"=>"Low Stock"],
+  ["name"=>"Pasta", "category"=>"Grocery", "price"=>12.00, "stock"=>0, "status"=>"Out of Stock"],  ["name"=>"Coffee Beans", "category"=>"Beverages", "price"=>25.00, "stock"=>120, "status"=>"In Stock"],
+  ["name"=>"Green Tea", "category"=>"Beverages", "price"=>15.50, "stock"=>80, "status"=>"In Stock"],
+  ["name"=>"Olive Oil", "category"=>"Grocery", "price"=>45.00, "stock"=>30, "status"=>"Low Stock"],
+  ["name"=>"Pasta", "category"=>"Grocery", "price"=>12.00, "stock"=>0, "status"=>"Out of Stock"],  ["name"=>"Coffee Beans", "category"=>"Beverages", "price"=>25.00, "stock"=>120, "status"=>"In Stock"],
+  ["name"=>"Green Tea", "category"=>"Beverages", "price"=>15.50, "stock"=>80, "status"=>"In Stock"],
+  ["name"=>"Olive Oil", "category"=>"Grocery", "price"=>45.00, "stock"=>30, "status"=>"Low Stock"],
+  ["name"=>"Pasta", "category"=>"Grocery", "price"=>12.00, "stock"=>0, "status"=>"Out of Stock"],  ["name"=>"Coffee Beans", "category"=>"Beverages", "price"=>25.00, "stock"=>120, "status"=>"In Stock"],
+  ["name"=>"Green Tea", "category"=>"Beverages", "price"=>15.50, "stock"=>80, "status"=>"In Stock"],
+  ["name"=>"Olive Oil", "category"=>"Grocery", "price"=>45.00, "stock"=>30, "status"=>"Low Stock"],
+  ["name"=>"Pasta", "category"=>"Grocery", "price"=>12.00, "stock"=>0, "status"=>"Out of Stock"],
 ];
 ?>
 <!DOCTYPE html>
@@ -23,7 +33,7 @@ $sidebarLinks = [
 
 <div class="flex">
 
-  <!-- Include reusable sidebar -->
+  <!-- Sidebar -->
   <?php include('sidebar.php'); ?>
 
   <!-- Main Content -->
@@ -36,29 +46,28 @@ $sidebarLinks = [
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
-      <h2 class="text-2xl font-bold mb-4">Dashboard</h2>
+      <h2 class="text-2xl font-bold mb-4">Manage Products</h2>
     </div>
     <hr class="border-2 border-black mb-4">
 
     <!-- Stats Cards -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       <?php
       $cards = [
-        ["title"=>"Total Products", "value"=>"128", "bg"=>"card1.jpg", "link"=>"directs.php"],
-        ["title"=>"Out Of Stock", "value"=>"16", "bg"=>"card2.jpg", "link"=>"directs.php"],
+        ["title"=>"Total Products", "value"=>count($products), "bg"=>"card1.jpg", "link"=>"directs.php"],
+        ["title"=>"Out Of Stock", "value"=>count(array_filter($products, fn($p)=>$p['stock']==0)), "bg"=>"card2.jpg", "link"=>"directs.php"],
         ["title"=>"Best-Selling", "value"=>"Coffee Beans", "bg"=>"card3.jpg", "link"=>"directs.php"],
         ["title"=>"Upcoming", "value"=>"Patti Oil", "bg"=>"card4.jpg", "link"=>"directs.php"]
       ];
       foreach($cards as $card): ?>
         <div class="relative rounded-xl shadow-lg h-40 text-white overflow-hidden transform hover:scale-105 transition duration-300"
            style="background-image: url('../images/<?= $card['bg'] ?>'); background-size: cover; background-position: center;">
-        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div class="relative p-4 h-full flex flex-col justify-between">
-          <h2 class="text-lg sm:text-xl font-semibold"><?= $card['title'] ?></h2>
-          <h1 class="text-2xl sm:text-3xl font-bold"><?= $card['value'] ?></h1>
-          <a href="<?= $card['link'] ?>" class="self-end bg-white bg-opacity-20 hover:bg-opacity-40 px-3 py-1 rounded-full text-lg font-bold transition">&#62;</a>
+          <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+          <div class="relative p-4 h-full flex flex-col justify-between">
+            <h2 class="text-lg sm:text-xl font-semibold"><?= $card['title'] ?></h2>
+            <h1 class="text-2xl sm:text-3xl font-bold"><?= $card['value'] ?></h1>
+          </div>
         </div>
-      </div>
       <?php endforeach; ?>
     </div>
 
@@ -68,16 +77,14 @@ $sidebarLinks = [
         <h3 class="text-xl font-semibold">All Products</h3>
 
         <!-- Add Product Button -->
-        <a href="addProductForm.php"
-          class="bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg shadow-lg flex items-center gap-2 px-4 py-2 transition transform hover:scale-105">
+        <label for="add-modal" class="bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg shadow-lg flex items-center gap-2 px-4 py-2 cursor-pointer transition transform hover:scale-105">
           <i class="fa-solid fa-plus-circle text-lg"></i>
           Add Products
-        </a>
+        </label>
       </div>
 
       <hr class="border-1 border-black mt-2 mb-6">
 
-      <!-- Table -->
       <div class="overflow-x-auto">
         <table class="min-w-full bg-white rounded-lg shadow">
           <thead class="bg-gray-800 text-white">
@@ -92,34 +99,28 @@ $sidebarLinks = [
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-200">
-            <tr class="hover:bg-gray-100">
-              <td class="py-2 px-4">1</td>
-              <td class="py-2 px-4">Coffee Beans</td>
-              <td class="py-2 px-4">Beverages</td>
-              <td class="py-2 px-4">$25.00</td>
-              <td class="py-2 px-4">120</td>
-              <td class="py-2 px-4">
-                <span class="px-2 py-1 bg-green-500 text-white rounded-full text-xs">In Stock</span>
-              </td>
-              <td class="py-2 px-4 flex gap-2">
-                <button class="px-2 py-1 bg-blue-500 text-white rounded hover:bg-blue-600">Edit</button>
-                <button class="px-2 py-1 bg-red-500 text-white rounded hover:bg-red-600">Delete</button>
-              </td>
-            </tr>
-            <tr class="hover:bg-gray-100">
-              <td class="py-2 px-4">2</td>
-              <td class="py-2 px-4">Patti Oil</td>
-              <td class="py-2 px-4">Health</td>
-              <td class="py-2 px-4">$15.00</td>
-              <td class="py-2 px-4">0</td>
-              <td class="py-2 px-4">
-                <span class="px-2 py-1 bg-red-500 text-white rounded-full text-xs">Out of Stock</span>
-              </td>
-              <td class="py-2 px-4 flex gap-2">
-                <button class="px-2 py-1 bg-blue-500 text-white rounded hover:bg-blue-600">Edit</button>
-                <button class="px-2 py-1 bg-red-500 text-white rounded hover:bg-red-600">Delete</button>
-              </td>
-            </tr>
+            <?php foreach($products as $index => $p): ?>
+              <tr class="hover:bg-gray-100">
+                <td class="py-2 px-4"><?= $index+1 ?></td>
+                <td class="py-2 px-4"><?= $p['name'] ?></td>
+                <td class="py-2 px-4"><?= $p['category'] ?></td>
+                <td class="py-2 px-4">$<?= number_format($p['price'], 2) ?></td>
+                <td class="py-2 px-4"><?= $p['stock'] ?></td>
+                <td class="py-2 px-4">
+                  <?php if($p['status']=="In Stock"): ?>
+                    <span class="px-2 py-1 bg-green-500 text-white rounded-full text-xs"><?= $p['status'] ?></span>
+                  <?php elseif($p['status']=="Low Stock"): ?>
+                    <span class="px-2 py-1 bg-yellow-500 text-white rounded-full text-xs"><?= $p['status'] ?></span>
+                  <?php else: ?>
+                    <span class="px-2 py-1 bg-red-500 text-white rounded-full text-xs"><?= $p['status'] ?></span>
+                  <?php endif; ?>
+                </td>
+                <td class="py-2 px-4 flex gap-2">
+                  <label for="edit-modal" class="px-2 py-1 bg-blue-500 text-white rounded cursor-pointer hover:bg-blue-600">Edit</label>
+                  <button class="deleteBtn px-2 py-1 bg-red-500 text-white rounded hover:bg-red-600">Delete</button>
+                </td>
+              </tr>
+            <?php endforeach; ?>
           </tbody>
         </table>
       </div>
@@ -128,21 +129,53 @@ $sidebarLinks = [
   </div>
 </div>
 
+<!-- Tailwind Modals -->
+<input type="checkbox" id="edit-modal" class="modal-toggle hidden">
+<div class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+  <div class="bg-white rounded-lg shadow-lg p-6 w-[500px] max-h-[90vh] overflow-y-auto relative">
+    <label for="edit-modal" class="absolute top-2 right-2 text-gray-600 hover:text-black cursor-pointer">
+      <i class="fa-solid fa-xmark text-xl"></i>
+    </label>
+    <?php include('productDetail.php'); ?>
+  </div>
+</div>
+
+<input type="checkbox" id="add-modal" class="modal-toggle hidden">
+<div class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+  <div class="bg-white rounded-lg shadow-lg p-6 w-[500px] max-h-[90vh] overflow-y-auto relative">
+    <label for="add-modal" class="absolute top-2 right-2 text-gray-600 hover:text-black cursor-pointer">
+      <i class="fa-solid fa-xmark text-xl"></i>
+    </label>
+    <?php include('addProduct.php'); ?>
+  </div>
+</div>
+
 <script>
 const sidebar = document.getElementById('sidebar');
 const menuButton = document.getElementById('menuButton');
-const cancelBtn = document.querySelector(".cancelBtn");
 
-// Close sidebar
-cancelBtn.addEventListener("click", () => {
-  sidebar.classList.add("-translate-x-full");
-});
-
-// Toggle sidebar
-menuButton.addEventListener('click', () => {
+// Sidebar toggle
+menuButton?.addEventListener('click', () => {
   sidebar.classList.toggle('-translate-x-full');
 });
+
+// Confirm Delete
+document.querySelectorAll(".deleteBtn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    if(confirm("Are you sure you want to delete this product?")){
+      console.log("Product deleted");
+    }
+  });
+});
 </script>
+
+<style>
+/* Tailwind modal visibility */
+.modal-toggle:checked + .modal {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+</style>
 
 </body>
 </html>

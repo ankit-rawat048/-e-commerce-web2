@@ -47,8 +47,8 @@ foreach ($categories as $category) {
                             <img src="<?php echo htmlspecialchars($p['image']); ?>" 
                                  alt="<?php echo htmlspecialchars($p['name']); ?>" 
                                  class="w-full rounded-lg border-2 border-blue-800 h-40 object-contain mb-3">
-                            <hr class="border-2 border-orange-400 my-4">
-                            <p class="font-semibold text-center text-gray-800 text-sm md:text-base">
+                            <hr class="w-full border-2 border-orange-400">
+                            <p class="font-semibold mb-auto text-center text-gray-800 text-sm md:text-base">
                                 <?php echo htmlspecialchars($p['name']); ?>
                             </p>
                             <div class="flex items-center w-full h-[2.5rem] mt-auto gap-2">

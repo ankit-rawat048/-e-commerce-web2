@@ -2,16 +2,16 @@
 $sidebarLinks = [
     ["label"=>"Dashboard", "href"=>"dashboard.php", "icon"=>"fa-gauge-high"],
     ["label"=>"Products", "href"=>"products.php", "icon"=>"fa-box-open"],
-    ["label"=>"Orders", "href"=>"orders.php", "icon"=>"fa-cart-shopping"],
-    ["label"=>"Users", "href"=>"users.php", "icon"=>"fa-users"],
-    ["label"=>"Reports", "href"=>"reports.php", "icon"=>"fa-chart-line"],
+    ["label"=>"Add Images", "href"=>"addimages.php", "icon"=>"fa-image"],
+    ["label"=>"Manage SCO", "href"=>"users.php", "icon"=>"fa-users"],
+    // ["label"=>"Reports", "href"=>"reports.php", "icon"=>"fa-chart-line"],
     ["label"=>"Settings", "href"=>"settings.php", "icon"=>"fa-gear"],
     ["label"=>"Logout", "href"=>"logout.php", "icon"=>"fa-right-from-bracket", "class"=>"mt-auto text-red-400 hover:bg-red-600"]
 ];
 ?>
-<div id="sidebar" class="bg-black text-white w-64 p-4 flex-shrink-0 fixed md:relative top-0 left-0 h-screen transition-transform transform -translate-x-full md:translate-x-0 z-50 flex flex-col">
+<div id="sidebar" class="bg-black text-white w-64 p-[24px] flex-shrink-0 fixed md:relative top-0 left-0 min-h-[110vh] max-h-[150vh] transition-transform transform -translate-x-full md:translate-x-0 z-50 flex flex-col">
     <div class="flex justify-between items-center mb-4">
-        <h3 class="text-lg font-bold">For Admin</h3>
+        <h3 class="text-[24px] font-bold">For Admin</h3>
         <button class="cancelBtn text-white lg:hidden" type="button">X</button>
     </div>
     <hr class="border-gray-600 mb-4">
