@@ -1,187 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="images/logo.ico">
-
-  <title>Dashboard</title>
-</head>
-
-
-<body class="bg-gray-100">
-  <div class="main-page-div flex">
-    <?php include("sidebar.php") ?>
-    <div class="main-content w-[85%] p-4">
-
-      <div class="w-full">
-
-        <h2 class="text-bold my-2">Products</h2>
-
-        <hr class="border-2 border-black w-full">
-
-        <!-- Cards Container -->
-        <div class="boxes grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-2">
-
-          <!-- Card 1 -->
-          <div class="stats-cards relative rounded-lg shadow h-40 text-white overflow-hidden"
-            style="background-image: url('images/card1.jpg'); background-size: cover; background-position: center;">
-            <div class="absolute inset-0 bg-black bg-opacity-40"></div> <!-- Overlay -->
-            <div class="relative p-4 h-full flex flex-col justify-between">
-              <h2 class="cards-heading text-lg font-semibold">Total Products</h2>
-              <h1 class="text-2xl font-bold">128 Products</h1>
-              <a href="directs.php" class="text-xl font-bold">&#62;</a>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="stats-cards relative rounded-lg shadow h-40 text-white overflow-hidden"
-            style="background-image: url('images/card2.jpg'); background-size: cover; background-position: center;">
-            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-            <div class="relative p-4 h-full flex flex-col justify-between">
-              <h2 class="cards-heading text-lg font-semibold">Out Of Stock Products</h2>
-              <h1 class="text-2xl font-bold">16 Products</h1>
-              <a href="directs.php" class="text-xl font-bold">&#62;</a>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="stats-cards relative rounded-lg shadow h-40 text-white overflow-hidden"
-            style="background-image: url('images/card3.jpg'); background-size: cover; background-position: center;">
-            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-            <div class="relative p-4 h-full flex flex-col justify-between">
-              <h2 class="cards-heading text-lg font-semibold">Best-Selling Product</h2>
-              <h1 class="text-2xl font-bold">Coffee Beans</h1>
-              <a href="directs.php" class="text-xl font-bold">&#62;</a>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="stats-cards relative rounded-lg shadow h-40 text-white overflow-hidden"
-            style="background-image: url('images/card4.jpg'); background-size: cover; background-position: center;">
-            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-            <div class="relative p-4 h-full flex flex-col justify-between">
-              <h2 class="cards-heading text-lg font-semibold">Upcoming Products</h2>
-              <h1 class="text-2xl font-bold">Patti Oil</h1>
-              <a href="directs.php" class="text-xl font-bold">&#62;</a>
-            </div>
-          </div>
-
-        </div>
-
-
-        <!-- Add, Remove, Edit Products Section -->
-        <div class="mt-6 flex items-end justify-between">
-          <h3 class="text-xl font-semibold mb-4">Manage Products</h3>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-            <!-- Add Products Button -->
-            <a href="/addProductFrom"
-              class="bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg shadow-lg flex flex-col justify-center items-center h-32 transition transform hover:scale-105">
-              <i class="fas fa-plus-circle text-3xl mb-2"></i>
-              Add Products
-            </a>
-
-            <!-- Remove Products Button
-            <a href="/removeProductFrom" 
-            class="bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg shadow-lg flex flex-col justify-center items-center h-32 transition transform hover:scale-105">
-            <i class="fas fa-trash-alt text-3xl mb-2"></i>
-            Remove Products
-        </a>
-        
-        Edit Products Button
-        <a href="/editProductFrom" 
-        class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded-lg shadow-lg flex flex-col justify-center items-center h-32 transition transform hover:scale-105">
-        <i class="fas fa-edit text-3xl mb-2"></i>
-        Edit Products
-    </a> -->
-
+<!-- Stats Cards -->
+    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <?php
+      $cards = [
+        ["title"=>"Total Products", "value"=>count($products), "bg"=>"card1.jpg"],
+        ["title"=>"Out Of Stock", "value"=>count(array_filter($products, fn($p)=>$p['stock']==0)), "bg"=>"card2.jpg"],
+        ["title"=>"Best-Selling", "value"=>"Coffee Beans", "bg"=>"card3.jpg"],
+        ["title"=>"Upcoming", "value"=>"Patti Oil", "bg"=>"card4.jpg"]
+      ];
+      foreach($cards as $card): ?>
+        <div class="relative rounded-xl shadow-lg h-40 text-white overflow-hidden transform hover:scale-105 transition duration-300"
+           style="background-image: url('../images/<?= $card['bg'] ?>'); background-size: cover; background-position: center;">
+          <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+          <div class="relative p-4 h-full flex flex-col justify-between">
+            <h2 class="text-lg sm:text-xl font-semibold"><?= $card['title'] ?></h2>
+            <h1 class="text-2xl sm:text-3xl font-bold"><?= $card['value'] ?></h1>
           </div>
         </div>
-
-        <hr class="border-1.5 border-black">
-
-
-        <!-- Table Section -->
-        <div class="mt-6">
-          <!-- Table content comes here -->
-        </div>
-
-      </div>
-      <!-- Table Section -->
-      <div class="mt-6">
-        <h3 class="text-xl font-semibold mb-2">All Products</h3>
-        <div class="overflow-x-auto">
-          <table class="min-w-full bg-white rounded-lg shadow">
-            <thead class="bg-gray-800 text-white">
-              <tr>
-                <th class="py-3 px-4 text-left">#</th>
-                <th class="py-3 px-4 text-left">Product Name</th>
-                <th class="py-3 px-4 text-left">Category</th>
-                <th class="py-3 px-4 text-left">Price</th>
-                <th class="py-3 px-4 text-left">Stock</th>
-                <th class="py-3 px-4 text-left">Status</th>
-                <th class="py-3 px-4 text-left">Actions</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-gray-200">
-              <tr class="hover:bg-gray-100">
-                <td class="py-2 px-4">1</td>
-                <td class="py-2 px-4">Coffee Beans</td>
-                <td class="py-2 px-4">Beverages</td>
-                <td class="py-2 px-4">$25.00</td>
-                <td class="py-2 px-4">120</td>
-                <td class="py-2 px-4">
-                  <span class="px-2 py-1 bg-green-500 text-white rounded-full text-xs">In Stock</span>
-                </td>
-                <td class="py-2 px-4 flex gap-2">
-                  <button class="px-2 py-1 bg-blue-500 text-white rounded hover:bg-blue-600">
-                    Edit
-                  </button>
-                  <button class="px-2 py-1 bg-red-500 text-white rounded hover:bg-red-600">
-                    Delete
-                  </button>
-                </td>
-              </tr>
-              <tr class="hover:bg-gray-100">
-                <td class="py-2 px-4">2</td>
-                <td class="py-2 px-4">Patti Oil</td>
-                <td class="py-2 px-4">Health</td>
-                <td class="py-2 px-4">$15.00</td>
-                <td class="py-2 px-4">0</td>
-                <td class="py-2 px-4">
-                  <span class="px-2 py-1 bg-red-500 text-white rounded-full text-xs">Out of Stock</span>
-                </td>
-                <td class="py-2 px-4 flex gap-2">
-                  <button class="px-2 py-1 bg-blue-500 text-white rounded hover:bg-blue-600">
-                    Edit
-                  </button>
-                  <button class="px-2 py-1 bg-red-500 text-white rounded hover:bg-red-600">
-                    Delete
-                  </button>
-                </td>
-              </tr>
-              <!-- Add more products here -->
-            </tbody>
-          </table>
-        </div>
-      </div>
+      <?php endforeach; ?>
     </div>
-
-  </div>
-</body>
-
-</html>

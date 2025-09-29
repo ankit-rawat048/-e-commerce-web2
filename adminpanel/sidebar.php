@@ -9,17 +9,21 @@ $sidebarLinks = [
     ["label"=>"Logout", "href"=>"logout.php", "icon"=>"fa-right-from-bracket", "class"=>"mt-auto text-red-400 hover:bg-red-600"]
 ];
 ?>
-<div id="sidebar" class="bg-black text-white w-64 p-[24px] flex-shrink-0 fixed md:relative top-0 left-0 min-h-[110vh] max-h-[150vh] transition-transform transform -translate-x-full md:translate-x-0 z-50 flex flex-col">
+
+<div id="sidebar" class="bg-black text-white w-64 p-6 flex-shrink-0 fixed md:relative top-0 left-0 min-h-screen max-h-[150vh] transition-transform transform -translate-x-full md:translate-x-0 z-50 flex flex-col">
+    <!-- Header -->
     <div class="flex justify-between items-center mb-4">
-        <h3 class="text-[24px] font-bold">For Admin</h3>
-        <button class="cancelBtn text-white lg:hidden" type="button">X</button>
+        <h3 class="text-2xl font-bold">For Admin</h3>
+        <button class="cancelBtn text-white lg:hidden text-xl" type="button">×</button>
     </div>
+
     <hr class="border-gray-600 mb-4">
 
+    <!-- Links -->
     <div class="flex flex-col gap-2 flex-1">
         <?php foreach($sidebarLinks as $link): ?>
             <a href="<?= $link['href'] ?>"
-               class="flex items-center gap-2 px-2 py-2 rounded hover:bg-gray-700 transition-colors <?= $link['class'] ?? '' ?>">
+               class="flex items-center gap-2 px-3 py-2 rounded hover:bg-gray-700 transition-colors <?= $link['class'] ?? '' ?>">
                <i class="fa-solid <?= $link['icon'] ?>"></i>
                <?= $link['label'] ?>
             </a>
