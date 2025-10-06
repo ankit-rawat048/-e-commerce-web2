@@ -19,9 +19,15 @@ if (isset($_POST['rename'])) {
     $oldName = $uploadDir . basename($_POST['oldName']);
     $newName = $uploadDir . basename($_POST['newName']);
     $ext = pathinfo($oldName, PATHINFO_EXTENSION);
-    if (!str_ends_with($newName, ".$ext")) {
-        $newName .= ".$ext"; // keep original extension
+
+    // Ensure new name has same extension
+    if (substr_compare($newName, ".$ext", -strlen(".$ext")) !== 0) {
+        $newName .= ".$ext";
     }
+
+    // Sanitize file name (optional)
+    $newName = preg_replace('/[^a-zA-Z0-9_\-\.]/', '_', $newName);
+
     if (file_exists($oldName) && !file_exists($newName)) {
         rename($oldName, $newName);
     }
@@ -53,36 +59,43 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
 
 // Get all uploaded images
 $images = glob($uploadDir . "*");
+
+// Function to get absolute URL of file
+function getImageUrl($path) {
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
+    $host = $_SERVER['HTTP_HOST'];
+    $baseDir = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
+    return $protocol . "://" . $host . $baseDir . "/" . $path;
+}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ayurveda - Image Manager</title>
 <?php include("../include/links.php") ?>
 <style>
-  /* Sidebar toggle */
-  #sidebar { transition: transform 0.3s ease; }
-  #sidebar.-translate-x-full { transform: translateX(-100%); }
-
-  /* Modal */
-  .modal { display: none; }
-  .modal.active { display: flex; }
+/* Modal */
+.modal { display: none; }
+.modal.active { display: flex; }
 </style>
 </head>
+
 <body class="bg-gray-100 min-h-screen">
 
-<div class="flex">
+<div class="flex flex-col md:flex-row">
 
   <!-- Sidebar -->
   <?php include('sidebar.php'); ?>
 
   <!-- Main Content -->
-  <div class="flex-1 p-6">
+  <div class="flex-1 p-4 md:p-6">
 
-    <div class="flex justify-between items-center mb-4">
+    <div class="flex justify-between items-center my-2">
       <button id="menuButton" class="md:hidden text-2xl text-black">
         <i class="fa-solid fa-bars"></i>
       </button>
@@ -95,48 +108,65 @@ $images = glob($uploadDir . "*");
     <?php if($msg): ?>
       <p class="mb-4 text-red-500 font-medium"><?= $msg ?></p>
     <?php endif; ?>
-    <form action="" method="POST" enctype="multipart/form-data" class="my-6 flex flex-col sm:flex-row gap-4 justify-center items-center">
-      <input type="file" name="image" accept="image/*" class="border border-gray-300 rounded px-3 py-2 w-full sm:w-auto">
-      <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 shadow transition">Add Image</button>
+
+    <form action="" method="POST" enctype="multipart/form-data"
+      class="border-2 border-dashed border-gray-300 rounded-lg p-6 mb-6 bg-gray-50 flex flex-col items-center gap-4 text-center shadow-sm hover:shadow-md transition">
+
+      <label class="cursor-pointer inline-flex items-center gap-2 bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-lg shadow transition">
+        <i class="fa-solid fa-file-arrow-up"></i>
+        <span>Choose Files</span>
+        <input type="file" name="image" accept="image/*" class="hidden" onchange="this.form.submit()">
+      </label>
+      <p class="text-sm text-gray-600">Drag & Drop or Select Image</p>
     </form>
 
     <!-- Images Table -->
-    <div class="overflow-x-auto bg-white rounded-lg shadow-lg">
+    <div class="overflow-y-auto max-h-[500px] overflow-x-auto max-w-[500px] lg:max-w-full bg-white rounded-lg shadow-lg">
       <table class="min-w-full divide-y divide-gray-200">
-        <thead class="bg-gray-800 text-white">
+        <thead class="bg-gray-800 text-white sticky top-0 z-10">
           <tr>
-            <th class="py-3 px-4 text-left">#</th>
-            <th class="py-3 px-4 text-left">Image</th>
-            <th class="py-3 px-4 text-left">Name</th>
-            <th class="py-3 px-4 text-left">Actions</th>
+            <th class="py-3 px-4 text-left text-sm">#</th>
+            <th class="py-3 px-4 text-left text-sm">Image</th>
+            <th class="py-3 px-4 text-left text-sm">Name</th>
+            <th class="py-3 px-4 text-left text-sm">Actions</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-gray-200">
           <?php $counter = 1; ?>
           <?php foreach($images as $imgPath): ?>
-          <tr class="hover:bg-gray-50 transition">
-            <td class="py-3 px-4 font-medium"><?= $counter++ ?></td>
-            <td class="py-2 px-4">
-              <img src="<?= $imgPath ?>" class="w-24 h-24 object-cover rounded shadow-md">
-            </td>
-            <td class="py-3 px-4 font-medium text-gray-700"><?= basename($imgPath) ?></td>
-            <td class="py-3 px-4 flex gap-2">
-              <button onclick="openRenameModal('<?= basename($imgPath) ?>')"
-                class="px-3 py-1 bg-yellow-500 text-white rounded hover:bg-yellow-600 shadow transition">
-                Edit Name
-              </button>
-              <a href="?delete=<?= urlencode(basename($imgPath)) ?>"
-                onclick="return confirm('Are you sure you want to delete this image?');"
-                class="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 shadow transition">
-                Delete
-              </a>
-            </td>
-          </tr>
+            <tr class="hover:bg-gray-50 transition">
+              <td class="py-3 px-4 font-medium text-gray-800 text-center"><?= $counter++ ?></td>
+              <td class="py-2 px-4">
+                <div class="flex justify-center">
+                  <img src="<?= $imgPath ?>" class="w-20 h-20 md:w-24 md:h-24 object-cover rounded-lg shadow-md border border-gray-200">
+                </div>
+              </td>
+              <td class="py-3 px-4 font-medium text-gray-700 truncate max-w-[150px] sm:max-w-[200px]">
+                <?= basename($imgPath) ?>
+              </td>
+              <td class="py-3 px-4">
+                <div class="flex justify-between items-center gap-2">
+                  <button onclick="openRenameModal('<?= basename($imgPath) ?>')"
+                    class="px-3 py-1.5 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 shadow transition">
+                    Edit
+                  </button>
+                  <button onclick="copyToClipboard('<?= getImageUrl($imgPath) ?>')"
+                    class="px-3 py-1.5 bg-green-500 text-white rounded-md hover:bg-green-600 shadow transition">
+                    Copy
+                  </button>
+                  <a href="?delete=<?= urlencode(basename($imgPath)) ?>"
+                    onclick="return confirm('Are you sure you want to delete this image?');"
+                    class="px-3 py-1.5 bg-red-500 text-white rounded-md hover:bg-red-600 shadow transition">
+                    Delete
+                  </a>
+                </div>
+              </td>
+            </tr>
           <?php endforeach; ?>
           <?php if(count($images) === 0): ?>
-          <tr>
-            <td colspan="4" class="py-6 px-4 text-center text-gray-500">No images uploaded yet.</td>
-          </tr>
+            <tr>
+              <td colspan="4" class="py-6 px-4 text-center text-gray-500">No images uploaded yet.</td>
+            </tr>
           <?php endif; ?>
         </tbody>
       </table>
@@ -144,14 +174,16 @@ $images = glob($uploadDir . "*");
 
     <!-- Rename Modal -->
     <div id="renameModal" class="modal fixed inset-0 z-50 items-center justify-center bg-black bg-opacity-50">
-      <div class="bg-white rounded-lg shadow-xl p-6 w-96">
+      <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-sm mx-2">
         <h2 class="text-2xl font-semibold mb-4 text-gray-800">Rename Image</h2>
         <form method="POST">
           <input type="hidden" name="oldName" id="oldName">
           <input type="text" name="newName" id="newName" class="border border-gray-300 rounded px-3 py-2 w-full mb-4" required>
-          <div class="flex justify-end gap-3">
-            <button type="button" onclick="closeRenameModal()" class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 transition">Cancel</button>
-            <button type="submit" name="rename" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">Rename</button>
+          <div class="flex justify-end gap-3 flex-wrap">
+            <button type="button" onclick="closeRenameModal()"
+              class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 transition w-full sm:w-auto">Cancel</button>
+            <button type="submit" name="rename"
+              class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition w-full sm:w-auto">Rename</button>
           </div>
         </form>
       </div>
@@ -160,25 +192,21 @@ $images = glob($uploadDir . "*");
   </div>
 </div>
 
+<script src="samescript.js"></script>
 <script>
-  // Sidebar toggle
-  const sidebar = document.getElementById('sidebar');
-  const menuButton = document.getElementById('menuButton');
-  const cancelBtn = document.querySelector(".cancelBtn");
-
-cancelBtn.addEventListener("click", ()=> sidebar.classList.add("-translate-x-full"));
-  menuButton.addEventListener("click", ()=> sidebar.classList.toggle("-translate-x-full"));
-
-
-  // Rename modal
-  function openRenameModal(filename) {
-    document.getElementById('oldName').value = filename;
-    document.getElementById('newName').value = filename;
-    document.getElementById('renameModal').classList.add('active');
-  }
-  function closeRenameModal() {
-    document.getElementById('renameModal').classList.remove('active');
-  }
+function openRenameModal(filename) {
+  document.getElementById('oldName').value = filename;
+  document.getElementById('newName').value = filename;
+  document.getElementById('renameModal').classList.add('active');
+}
+function closeRenameModal() {
+  document.getElementById('renameModal').classList.remove('active');
+}
+function copyToClipboard(url) {
+  navigator.clipboard.writeText(url)
+    .then(() => alert('Image URL copied: ' + url))
+    .catch(err => alert('Failed to copy URL: ' + err));
+}
 </script>
 
 </body>

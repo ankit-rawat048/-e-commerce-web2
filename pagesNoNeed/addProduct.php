@@ -23,6 +23,12 @@
                    class="border p-2 w-full rounded" placeholder="Enter stock" required>
         </div>
 
+        <!-- Image URL -->
+         <div>
+            <label for="imageUrl" class="block text-sm font-medium">Image URL</label>
+            <input type="url" id="imageUrl" name="imageUrl" class="border p-2 w-full rounded" placeholder="Enter image URL">
+         </div>
+
         <!-- Description -->
         <div>
             <label for="description" class="block text-sm font-medium">Description</label>
