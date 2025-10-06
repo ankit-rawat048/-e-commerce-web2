@@ -1,7 +1,7 @@
 <?php
 $sidebarLinks = [
     ["label"=>"Dashboard", "href"=>"dashboard.php", "icon"=>"fa-gauge-high"],
-    ["label"=>"Manage Products", "href"=>"manageproducts.php", "icon"=>"fa-box-open"],
+    ["label"=>"Manage Products", "href"=>"manage-products.php", "icon"=>"fa-box-open"],
     ["label"=>"Add Images", "href"=>"addimages.php", "icon"=>"fa-image"],
     ["label"=>"Manage SEO", "href"=>"manage_seo.php", "icon"=>"fa-users"],
     // ["label"=>"Reports", "href"=>"reports.php", "icon"=>"fa-chart-line"],

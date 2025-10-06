@@ -86,6 +86,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <hr class="border-2 border-black mb-4">
 
+      <?php include 'cards.php'; ?>
+
+
             <?php if (isset($success)): ?>
             <div class="bg-green-100 text-green-800 p-3 rounded mb-4">
                 <?= $success ?>
@@ -133,7 +136,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
 
             <!-- Products Table -->
-            <div class="w-full mx-auto bg-white shadow-lg rounded-lg p-6">
+            <div class="w-full mx-auto bg-white shadow-lg rounded-lg p-6 mt-6">
                 <h3 class="text-xl font-semibold mb-4">Products List</h3>
                 <div class="overflow-x-auto">
                     <table class="min-w-full bg-white">

@@ -185,21 +185,32 @@ for ($i = 0; $i < 10; $i++) {
 
   // ✅ Mail Modal
   function openMailModal(email) {
+    const modal = document.getElementById("mailModal");
     document.getElementById("mailTo").value = email;
-    document.getElementById("mailModal").classList.add("active");
+    modal.classList.add("active");
+
+    // close madal if click outside
+    window,addEventListener("click", function handler(e) {
+      if  (e.target === modal) {
+        closeMailModal();
+        window.removeEventListener("click", handler); // remove listener after closing
+      }
+    });
   }
+
   function closeMailModal() {
-    document.getElementById("mailModal").classList.remove("active");
+    const modal = document.getElementById("mailModal");
+    modal.classList.remove("active");
     document.getElementById("mailForm").reset();
     document.getElementById("previewAttachment").classList.add("hidden");
   }
-  function sendMail(e) {
+  function sendmail(e) {
     e.preventDefault();
-    alert(`📩 Mail sent to ${document.getElementById("mailTo").value}`);
+    alert(`Mail sent to ${document.getElementById("mailTo").value}`);
     closeMailModal();
   }
-  document.getElementById("mailAttachment").addEventListener("change", function() {
-    const file = this.files[0];
+  document.getElementById("mailAttachment").addEventListener("change",function() {
+    const file =this.files[0];
     const p = document.getElementById("previewAttachment");
     if (file) {
       p.src = URL.createObjectURL(file);
@@ -209,17 +220,29 @@ for ($i = 0; $i < 10; $i++) {
     }
   });
 
+
   // ✅ Bill Modal
   function openBillModal(c, p, q, d, s) {
+    const modal = document.getElementById("billModal");
     fetch(`bill.php?customer=${encodeURIComponent(c)}&product=${encodeURIComponent(p)}&quantity=${q}&date=${d}&status=${s}`)
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById("billContent").innerHTML = html;
-        document.getElementById("billModal").classList.add("active");
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("billContent").innerHTML = html;
+      modal.classList.add("active");
+
+      // close modal if click outside
+      window.addEventListener("click", function handler(e) {
+        if (e.target === modal) {
+          closeBillModal();
+          window.removeEventListener("click", handler); 
+        }
       });
+    });
   }
+
   function closeBillModal() {
-    document.getElementById("billModal").classList.remove("active");
+    const modal = document.getElementById("billModal");
+    modal.classList.remove("active");
     document.getElementById("billContent").innerHTML = '';
   }
 
