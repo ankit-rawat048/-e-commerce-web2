@@ -27,13 +27,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Product SEO</title>
     <?php include("../include/links.php"); ?>
+    <link rel="stylesheet" href="sameStyle.css">
     <style>
-        body { font-family: Arial, sans-serif; }
+        body {
+            font-family: Arial, sans-serif;
+        }
 
         /* Modal */
         .modal {
@@ -49,17 +53,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             pointer-events: none;
             transition: opacity 0.3s ease;
         }
+
         .modal.show {
             opacity: 1;
             pointer-events: auto;
         }
+
         .modal-content {
             background: #fff;
             width: 100%;
             max-width: 600px;
             padding: 2rem;
             border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
         }
 
@@ -70,9 +76,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             object-fit: cover;
             border-radius: 4px;
         }
-        .overflow-x-auto { overflow-x: auto; }
+
+        .overflow-x-auto {
+            overflow-x: auto;
+        }
     </style>
 </head>
+
 <body class="bg-gray-100">
     <div class="flex flex-col md:flex-row">
         <?php include("sidebar.php"); ?>
@@ -86,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <hr class="border-2 border-black mb-4">
 
-      <?php include 'cards.php'; ?>
+            <?php include 'cards.php'; ?>
 
 
             <?php if (isset($success)): ?>
@@ -98,39 +108,48 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <!-- SEO Modal -->
             <div id="formModal" class="modal">
                 <div class="modal-content">
-                    <button id="closeFormBtn" class="absolute top-2 right-2 text-gray-500 hover:text-black text-2xl">&times;</button>
+                    <button id="closeFormBtn"
+                        class="absolute top-2 right-2 text-gray-500 hover:text-black text-2xl">&times;</button>
                     <h3 class="text-xl font-semibold mb-4">Manage Product SEO</h3>
                     <form method="POST" class="space-y-4" id="seoForm">
                         <div>
                             <label class="block text-gray-700 mb-1">Product Name</label>
                             <input type="text" name="product_name" id="seoProductName" placeholder="Enter product name"
-                                value="<?= htmlspecialchars($_POST['product_name'] ?? '') ?>" class="w-full border rounded p-2" required>
+                                value="<?= htmlspecialchars($_POST['product_name'] ?? '') ?>"
+                                class="w-full border rounded p-2" required>
                         </div>
                         <div>
                             <label class="block text-gray-700 mb-1">Company Name</label>
                             <input type="text" name="company_name" id="seoCompanyName" placeholder="Enter company name"
-                                value="<?= htmlspecialchars($_POST['company_name'] ?? '') ?>" class="w-full border rounded p-2" required>
+                                value="<?= htmlspecialchars($_POST['company_name'] ?? '') ?>"
+                                class="w-full border rounded p-2" required>
                         </div>
                         <div>
                             <label class="block text-gray-700 mb-1">Product Image URL</label>
-                            <input type="url" name="image_url" id="seoImageUrl" placeholder="Enter product image URL" class="w-full border rounded p-2">
+                            <input type="url" name="image_url" id="seoImageUrl" placeholder="Enter product image URL"
+                                class="w-full border rounded p-2">
                         </div>
                         <div>
                             <label class="block text-gray-700 mb-1">Meta Title</label>
                             <input type="text" name="meta_title" id="seoMetaTitle" placeholder="SEO meta title"
-                                value="<?= htmlspecialchars($_POST['meta_title'] ?? '') ?>" class="w-full border rounded p-2" required>
+                                value="<?= htmlspecialchars($_POST['meta_title'] ?? '') ?>"
+                                class="w-full border rounded p-2" required>
                         </div>
                         <div>
                             <label class="block text-gray-700 mb-1">Meta Description</label>
                             <textarea name="meta_description" id="seoMetaDescription" rows="3"
-                                placeholder="SEO meta description" class="w-full border rounded p-2" required><?= htmlspecialchars($_POST['meta_description'] ?? '') ?></textarea>
+                                placeholder="SEO meta description" class="w-full border rounded p-2"
+                                required><?= htmlspecialchars($_POST['meta_description'] ?? '') ?></textarea>
                         </div>
                         <div>
                             <label class="block text-gray-700 mb-1">Keywords (comma-separated)</label>
-                            <input type="text" name="keywords" id="seoKeywords" placeholder="e.g., ayurveda, herbal medicine"
-                                value="<?= htmlspecialchars($_POST['keywords'] ?? '') ?>" class="w-full border rounded p-2">
+                            <input type="text" name="keywords" id="seoKeywords"
+                                placeholder="e.g., ayurveda, herbal medicine"
+                                value="<?= htmlspecialchars($_POST['keywords'] ?? '') ?>"
+                                class="w-full border rounded p-2">
                         </div>
-                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Save SEO</button>
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Save
+                            SEO</button>
                     </form>
                 </div>
             </div>
@@ -138,15 +157,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <!-- Products Table -->
             <div class="w-full mx-auto bg-white shadow-lg rounded-lg p-6 mt-6">
                 <h3 class="text-xl font-semibold mb-4">Products List</h3>
-                <div class="overflow-x-auto">
-                    <table class="min-w-full bg-white">
+                <div class="table-size overflow-y-auto overflow-x-auto max-h-[500px] bg-white rounded-lg shadow-lg">
+                    <table class="w-full md:min-w-[700px] lg:min-w-[900px] divide-y divide-gray-200">
                         <thead class="bg-gray-800 text-white sticky top-0 z-10">
                             <tr>
                                 <th class="py-2 px-4">#</th>
                                 <th class="py-2 px-4">Image</th>
                                 <th class="py-2 px-4">Product</th>
                                 <th class="py-2 px-4">Company</th>
-                                <th class="py-2 px-4">Description</th>
+                                <th class="py-2 px-4">Meta Description</th>
                                 <th class="py-2 px-4">SEO</th>
                             </tr>
                         </thead>
@@ -171,15 +190,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         function renderProductTable() {
             const tbody = document.getElementById('productTableBody');
             tbody.innerHTML = '';
-            products.forEach((p,i) => {
+            products.forEach((p, i) => {
                 let imgSrc = p.image || p.imageUrl || '';
                 tbody.innerHTML += `<tr class="hover:bg-gray-100">
-                    <td class="py-2 px-4">${i+1}</td>
+                    <td class="py-2 px-4">${i + 1}</td>
                     <td class="py-2 px-4">${imgSrc ? `<img src="${imgSrc}" class="product-img" alt="${p.name}">` : ''}</td>
                     <td class="py-2 px-4">${p.name}</td>
                     <td class="py-2 px-4">${p.company}</td>
                     <td class="py-2 px-4">${p.description}</td>
-                    <td class="py-2 px-4"><button onclick="openSeoModal('${p.name}','${p.company}')" class="bg-purple-600 hover:bg-purple-700 text-white px-2 py-1 rounded text-sm">SEO</button></td>
+                    <td class="py-2 px-4 w-[10rem]"><button onclick="openSeoModal('${p.name}','${p.company}')" class="bg-purple-600 hover:bg-purple-700 text-white px-2 py-2 h-full w-full rounded text-sm">MANAGE SEO</button></td>
                 </tr>`;
             });
         }
@@ -188,7 +207,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         const modal = document.getElementById('formModal');
         const closeBtn = document.getElementById('closeFormBtn');
         closeBtn.addEventListener('click', () => modal.classList.remove('show'));
-        window.addEventListener('click', e => { if(e.target === modal) modal.classList.remove('show'); });
+        window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('show'); });
 
         function openSeoModal(productName, companyName) {
             document.getElementById('seoProductName').value = productName;
@@ -208,4 +227,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     </script>
 </body>
+
 </html>

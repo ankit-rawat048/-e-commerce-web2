@@ -12,8 +12,11 @@ $sidebarLinks = [
 
 <div id="sidebar" class="bg-black text-white w-64 p-6 flex-shrink-0 fixed md:relative top-0 left-0 min-h-screen transition-transform transform -translate-x-full md:translate-x-0 z-50 flex flex-col">
     <!-- Header -->
-    <div class="flex justify-between items-center mb-4">
-        <h3 class="text-2xl font-bold">For Admin</h3>
+    <div class="flex justify-between items-center">
+        <div class="flex justify-center items-center">
+            <img src="../images/logo.png" alt="logo" class="w-[3rem] h-[3rem] bg-gray-300 rounded-full">
+            <h3 class="text-2xl font-bold">For Admin</h3>
+        </div>
         <button class="cancelBtn text-white md:hidden lg:hidden text-xl" type="button">×</button>
     </div>
 
