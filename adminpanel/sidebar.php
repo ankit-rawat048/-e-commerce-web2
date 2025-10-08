@@ -15,7 +15,7 @@ $sidebarLinks = [
     <div class="flex justify-between items-center">
         <div class="flex justify-center items-center">
             <img src="../images/logo.png" alt="logo" class="w-[3rem] h-[3rem] bg-gray-300 rounded-full">
-            <h3 class="text-2xl font-bold">For Admin</h3>
+            <h3 class="text-2xl font-bold">Admin</h3>
         </div>
         <button class="cancelBtn text-white md:hidden lg:hidden text-xl" type="button">×</button>
     </div>
