@@ -30,14 +30,15 @@ $bestsellers = $stmt->fetchAll();
                         <p class="font-semibold text-center text-gray-800 text-sm md:text-base">
                             <?php echo htmlspecialchars($product['name']); ?>
                         </p>
-                        <div class="flex justify-between items-center w-full mt-auto gap-2">
-                            <span class="bg-gray-200 text-gray-700 p-2 w-[50%] text-center text-xs md:text-sm">
-                                <?php echo htmlspecialchars($product['brand_name'] ?? 'Shri Ganga Herbal'); ?>
-                            </span>
-                            <span class="bg-orange-100 text-orange-700 flex justify-center items-center w-[50%] h-[100%] text-[1rem] font-bold">
-                                ₹<?php echo number_format($product['min_price'] ?? 0, 2); ?>
-                            </span>
-                        </div>
+                        <div class="flex justify-between items-center w-full h-[3rem] mt-auto gap-2">
+    <span class="bg-gray-200 text-gray-700 flex justify-center items-center w-1/2 h-full text-center text-xs md:text-sm rounded-lg">
+        <?php echo htmlspecialchars($product['brand_name'] ?? 'Shri Ganga Herbal'); ?>
+    </span>
+    <span class="bg-orange-100 text-orange-700 flex justify-center items-center w-1/2 h-full text-base font-bold rounded-lg">
+        ₹<?php echo number_format($product['min_price'] ?? 0, 2); ?>
+    </span>
+</div>
+
                     </a>
                 <?php endforeach; ?>
             </div>

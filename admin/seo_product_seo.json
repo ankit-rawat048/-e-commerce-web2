@@ -1,0 +1,18 @@
+{
+    "Coffee Beans": {
+        "product_name": "Coffee Beans",
+        "company_name": "Beans Factory",
+        "image": "http:\/\/localhost\/shriganga\/adminpanel\/uploads\/1759221088_Screenshot 2025-09-29 132051.png",
+        "meta_title": "herbal Tea",
+        "meta_description": "this is last testing and then.... then?? then i will... w.. i..... l....rrrrrrrr",
+        "keywords": "ayurveda , harbal medicine "
+    },
+    "Ashwagandha": {
+        "product_name": "Ashwagandha",
+        "company_name": "Himalaya",
+        "image": "http:\/\/localhost\/shriganga\/adminpanel\/uploads\/1759221095_Screenshot 2024-02-28 203205.png",
+        "meta_title": "herbal Tea",
+        "meta_description": "tertrtert",
+        "keywords": "ayurveda , harbal medicine "
+    }
+}
