@@ -16,6 +16,10 @@
 
     <!-- Main Content -->
     <main class="max-w-6xl mx-auto py-12 space-y-12">
+        <!-- Hero Section -->
+    <div class="bg-green-100 w-full">
+        <img src="./images/herbal_page-0001.jpg" id="bgImg" class="w-full" alt="hero-img">
+</div>
 
         <!-- About Section -->
         <section class="text-center">

@@ -146,6 +146,8 @@ try {
   align-items: center;
 }
 
+
+
     </style>
 </head>
 
@@ -179,31 +181,46 @@ try {
                         class="flex flex-col w-full justify-between items-stretch sm:items-center bg-gray-50 md:p-4 rounded-xl shadow-lg transition-all relative">
 
                         <!-- Header Section -->
-                        <div class="flex flex-col sm:flex-row sm:items-center w-full gap-2">
+                        <div class="flex flex-col sm:flex-row sm:items-center w-full gap-4 sm:relative bg-gray-50">
 
-                            <!-- Title -->
-                            <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 whitespace-nowrap sm:w-auto">All
-                                Products</h3>
+  <!-- Title & Buttons Section -->
+  <div class="flex sm:flex-row justify-between items-center w-full gap-3 sm:gap-4">
+    <!-- Title -->
+    <h3 class="proName text-lg sm:text-3xl font-bold text-gray-800 sm:text-left whitespace-normal leading-tight">
+      All Products
+    </h3>
 
-                            <!-- Centered Search Bar on Large Screens -->
-                            <div class="mt-4 sm:mt-0 sm:absolute sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:w-1/2">
-                                <input type="text" id="searchInput"
-                                    placeholder="Search by Name, Category, Company, Disease, or Description"
-                                    class="w-full border border-gray-300 focus:border-green-500 focus:ring-1 focus:ring-green-400 rounded-lg px-4 py-2 text-sm sm:text-base outline-none transition duration-200 shadow-sm" />
-                            </div>
+    <!-- Buttons -->
+    <div class="flex sm:flex-row gap-2 w-full sm:w-auto">
+      <button
+        onclick="openAddProductModal()"
+        class="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white w-full sm:w-auto md:px-4 md:py-2 text-sm font-medium rounded-lg shadow-sm transition duration-200"
+      >
+        <i class="fa-solid fa-plus"></i>
+        <span>Add Product</span>
+      </button>
 
-                            <!-- Buttons -->
-                            <div class="flex gap-2 md:mt-4 mt-1 sm:ml-auto absolute md:reletive top-0 right-0">
-                                <button onclick="openAddProductModal()"
-                                    class="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white md:px-4 px-2 md:py-2 py-1 text-sm rounded-lg shadow-sm transition duration-200">
-                                    <i class="fa-solid fa-plus"></i> Add Product
-                                </button>
-                                <button onclick="openAddCategoryModal()"
-                                    class="flex items-center md:gap-2 gap-1 bg-blue-500 hover:bg-blue-600 text-white md:px-4 px-2 md:py-2 py-1 text-sm rounded-lg shadow-sm transition duration-200">
-                                    <i class="fa-solid fa-plus"></i> Add Category
-                                </button>
-                            </div>
-                        </div>
+      <button
+        onclick="openAddCategoryModal()"
+        class="flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-600 text-white w-full sm:w-auto md:px-4 md:py-2 text-sm font-medium rounded-lg shadow-sm transition duration-200"
+      >
+        <i class="fa-solid fa-plus"></i>
+        <span>Add Category</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Search Bar -->
+  <div class="w-full sm:w-1/2 mt-3 sm:mt-0 sm:absolute sm:left-1/2 sm:-translate-x-1/2 sm:transform">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search by Name, Category, Company, Disease, or Description"
+      class="w-full border border-gray-300 focus:border-green-500 focus:ring-1 focus:ring-green-400 rounded-lg px-4 py-2 text-sm sm:text-base outline-none transition duration-200 shadow-sm"
+    />
+  </div>
+</div>
+
                     </div>
                 </div>
 

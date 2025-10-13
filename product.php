@@ -73,6 +73,7 @@ $baseWeight = $variants[0]['weight'];
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <?php include("include/title.php") ?>
     <?php include("include/links.php") ?>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">

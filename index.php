@@ -21,12 +21,9 @@ require_once 'include/conn.php';
     <?php include("include/header.php") ?>
 
     <!-- Hero Section -->
-    <section id="bgImg" class="bg-green-100 py-20 text-center">
-        <div class="max-w-xl mx-auto">
-            <p class="text-green-800 font-semibold mb-2">OUR BESTSELLERS</p>
-            <h2 class="text-4xl md:text-5xl font-bold mb-4 hero-title">Latest Arrival</h2>
-        </div>
-    </section>
+    <div class="bg-green-100 w-full">
+        <img src="./images/herbal_page-0002.jpg" id="bgImg" class="w-full" alt="hero-img">
+</div>
 
     <!-- Latest Collections -->
     <?php include("indexsection/latest.php") ?>
@@ -62,6 +59,11 @@ require_once 'include/conn.php';
             </div>
         </div>
     </section>
+
+    <!-- Hero Section -->
+    <div class="bg-green-100 w-full">
+        <img src="./images/herbal_page-0003.jpg" id="bgImg" class="w-full" alt="hero-img">
+</div>
 
     <!-- Subscribe Section -->
     <?php include("include/subscribe.php") ?>

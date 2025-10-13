@@ -133,7 +133,7 @@ try {
                                 data-order-id="<?= $o['order_id'] ?>">
                                 <td class="py-3 px-4"><?= $index + 1 ?></td>
                                 <td class="py-3 px-4"><?= htmlspecialchars($o['customer']) ?></td>
-                                <td class="py-3 px-4"><?= htmlspecialchars($o['products']) ?></td>
+                                <td class="py-3 px-4">Himalayan Ghutno ke Dard Grice ki Fanki</td>
                                 <td class="py-3 px-4"><?= htmlspecialchars($o['quantities']) ?></td>
                                 <td class="py-3 px-4"><?= htmlspecialchars(date('Y-m-d', strtotime($o['date']))) ?></td>
                                 <td class="py-3 px-4">
@@ -145,17 +145,35 @@ try {
                                         <option value="In-Progress" <?= $o['status'] == "In-Progress" ? "selected" : "" ?>>In-Progress</option>
                                     </select>
                                 </td>
-                                <td class="py-3 px-4 flex gap-2">
-                                    <button onclick="openMailModal('<?= htmlspecialchars($o['email']) ?>')"
-                                        class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-xs flex items-center gap-1 shadow">
-                                        <i class="fa-solid fa-envelope"></i> Mail
-                                    </button>
-                                    <button
-                                        onclick="openBillModal('<?= htmlspecialchars($o['customer']) ?>','<?= htmlspecialchars($o['products']) ?>','<?= htmlspecialchars($o['quantities']) ?>','<?= htmlspecialchars(date('Y-m-d', strtotime($o['date']))) ?>','<?= htmlspecialchars($o['status']) ?>','<?= $o['order_id'] ?>')"
-                                        class="bg-gray-700 hover:bg-gray-800 text-white px-3 py-1 rounded text-xs flex items-center gap-1 shadow">
-                                        <i class="fa-solid fa-file-invoice"></i> Bill
-                                    </button>
-                                </td>
+                                <td class="py-3 px-4">
+  <div class="flex flex-col sm:flex-row gap-2 h-full">
+    <!-- Mail Button -->
+    <button
+      onclick="openMailModal('<?= htmlspecialchars($o['email']) ?>')"
+      class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-xs flex items-center justify-center gap-1 shadow transition duration-200 w-full sm:w-auto"
+    >
+      <i class="fa-solid fa-envelope"></i>
+      <span>Mail</span>
+    </button>
+
+    <!-- Bill Button -->
+    <button
+      onclick="openBillModal(
+        '<?= htmlspecialchars($o['customer']) ?>',
+        '<?= htmlspecialchars($o['products']) ?>',
+        '<?= htmlspecialchars($o['quantities']) ?>',
+        '<?= htmlspecialchars(date('Y-m-d', strtotime($o['date']))) ?>',
+        '<?= htmlspecialchars($o['status']) ?>',
+        '<?= $o['order_id'] ?>'
+      )"
+      class="bg-gray-700 hover:bg-gray-800 text-white px-3 py-1 rounded text-xs flex items-center justify-center gap-1 shadow transition duration-200 w-full sm:w-auto"
+    >
+      <i class="fa-solid fa-file-invoice"></i>
+      <span>Bill</span>
+    </button>
+  </div>
+</td>
+
                             </tr>
                             <?php endforeach; ?>
                         </tbody>

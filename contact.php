@@ -28,7 +28,7 @@
         <section class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 rounded-lg shadow-lg">
 
             <!-- Image -->
-            <img src="https://static.vecteezy.com/system/resources/thumbnails/060/705/571/small/traditional-mortar-and-pestle-for-grinding-ingredients-photo.jpeg"
+            <img src="./images/herbal_page-0003.jpg"
                 alt="contact image" class="w-full md:w-1/2 rounded-lg shadow-lg object-cover">
 
             <!-- Info -->

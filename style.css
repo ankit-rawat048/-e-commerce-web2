@@ -1,8 +1,15 @@
 #bgImg {
-    background-image: url("https://img.freepik.com/premium-photo/ayurveda-background_1022134-25291.jpg?w=360");
+    /* background-image: url("./images/herbal_page-0002.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom center;
+    /* background-position: bottom; */
+    /* width: auto; */
+}
+
+@media (max-width:500px){
+    #bgImg {
+        height: auto;
+    }
 }
 
 /* General text */
@@ -11,11 +18,18 @@ body {
 }
 
 /* Headings (h1–h6) */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Open Sans', sans-serif;
 }
 
 /* Main headings / titles (like your hero sections) */
-.main-title, .title {
+.main-title,
+.title {
     font-family: 'Montserrat', sans-serif;
 }
+
