@@ -52,8 +52,7 @@ foreach ($categories as $category) {
                         <p class="font-semibold text-center text-gray-800 text-sm md:text-base">
                             <?php echo htmlspecialchars($product['name']); ?>
                         </p>
-
-                        <div class="flex justify-between items-center w-full h-[3rem] mt-auto gap-2">
+                        <div class="flex justify-between items-center w-full h-[3rem] mt-4 gap-2">
                             <span
                                 class="bg-gray-200 text-gray-700 flex justify-center items-center w-1/2 h-full text-center text-xs md:text-sm rounded-lg">
                                 <?php echo htmlspecialchars($product['brand_name'] ?? 'Shri Ganga Herbal'); ?>
