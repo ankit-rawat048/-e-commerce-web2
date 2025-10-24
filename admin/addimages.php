@@ -151,11 +151,11 @@ try {
     </style>
 </head>
 <body class="bg-gray-100 min-h-screen">
-    <div class="flex flex-col md:flex-row">
+    <div class="flex flex-col md:flex-row w-full">
         <!-- Sidebar -->
         <?php include('sidebar.php'); ?>
         <!-- Main Content -->
-        <div class="flex-1 p-4 md:p-6">
+        <div class="flex-1 p-4 md:p-6 w-full lg:w-[75%]">
             <div class="flex justify-between items-center my-2">
                 <button id="menuButton" class="md:hidden text-2xl text-black">
                     <i class="fa-solid fa-bars"></i>
@@ -181,8 +181,8 @@ try {
                 <p class="text-sm text-gray-600">Drag & Drop or Select Image</p>
             </form>
             <!-- Images Table -->
-            <div class="table-size overflow-y-auto max-h-[500px] overflow-x-auto bg-white rounded-lg shadow-lg">
-                <table class="w-full md:min-w-[700px] lg:min-w-[900px] divide-y divide-gray-200">
+            <div class="table-size overflow-y-auto max-h-[500px] lg:max-h-[60vh] overflow-x-auto bg-white rounded-lg shadow-lg">
+                <table class="w-full lg:min-w-[900px] divide-y divide-gray-200">
                     <thead class="bg-gray-800 text-white sticky top-0 z-10">
                         <tr>
                             <th class="py-3 px-4 text-left text-sm">#</th>

@@ -16,14 +16,14 @@
     <?php include("include/header.php") ?>
 
     <!-- Main Contact Section -->
-    <main class="max-w-6xl mx-auto px-4 py-12 space-y-12">
+    <main class=" pt-12 space-y-12">
         <!-- Hero Section -->
         <div class="bg-green-100 w-full">
             <img src="./images/herbal_page-0003.jpg" id="bgImg" class="w-full" alt="hero-img">
         </div>
         <!-- Contact Heading -->
         <section class="text-center">
-            <h3 class="text-2xl font-bold text-green-600">CONTACT US</h3>
+            <h3 class="text-2xl font-bold text-green-600 main-title">CONTACT US</h3>
             <div class="w-16 h-1 bg-green-600 mx-auto mt-2"></div>
         </section>
 
@@ -33,7 +33,7 @@
 
             <!-- Info -->
             <div class="w-full lg:w-1/2 space-y-4 text-gray-700">
-                <h3 class="text-2xl font-bold text-green-600">Our Store</h3>
+                <h3 class="text-2xl font-bold text-green-600 main-title">Our Store</h3>
                 <div class="space-y-1">
                     <p class="text-base">Shop No. 2, Ram Jhula, Swarg Ashram Rishikesh</p>
                     <p class="text-base">Uttarakhand 249304</p>

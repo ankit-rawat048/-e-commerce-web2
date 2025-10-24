@@ -38,9 +38,8 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php include("../include/links.php"); ?>
+    <?php include("links.php"); ?>
     <link rel="stylesheet" href="sameStyle.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZNvSGne9U3CfarzuMpBbsIhqWXvK9RbKpT1OK3ZNLk1k0qWmXTJ8Xavbp4De4F1jBsn6P+pt09zNkgSNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <style>
         .status-select option[value="Delivered"] {
             background-color: #dcfce7;
@@ -82,7 +81,7 @@ try {
     </style>
 </head>
 <body class="bg-gray-100 min-h-screen">
-    <div class="flex flex-col md:flex-row">
+    <div class="flex flex-col md:flex-row w-full">
         <?php 
         if (file_exists('sidebar.php')) {
             include('sidebar.php'); 
@@ -90,7 +89,7 @@ try {
             echo '<p class="text-red-500">Error: sidebar.php not found</p>';
         }
         ?>
-        <div class="flex-1 p-4 md:p-6">
+        <div class="flex-1 p-4 md:p-6 w-full">
             <div class="flex justify-between items-center my-2">
                 <button id="menuButton" class="md:hidden text-2xl text-black">
                     <i class="fa-solid fa-bars"></i>
@@ -112,8 +111,8 @@ try {
                         class="border border-gray-400 focus:border-green-500 focus:ring-1 focus:ring-green-400 rounded-lg px-3 py-2 text-sm sm:w-60 outline-none transition" />
                 </div>
                 <hr class="border border-black mb-4">
-                <div class="table-size overflow-y-auto overflow-x-auto max-h-[500px] bg-white rounded-lg shadow-lg">
-                    <table class="w-full md:min-w-[700px] lg:min-w-[900px] divide-y divide-gray-200">
+                <div class="table overflow-y-auto overflow-x-auto max-h-[500px] lg:max-h-[60vh] bg-white rounded-lg shadow-lg w-full">
+                    <table class="w-full lg:min-w-[900px] divide-y divide-gray-200">
                         <thead class="bg-gray-800 text-white sticky top-0 z-10 shadow-md">
                             <tr>
                                 <th class="py-3 px-4">#</th>
@@ -133,7 +132,7 @@ try {
                                 data-order-id="<?= $o['order_id'] ?>">
                                 <td class="py-3 px-4"><?= $index + 1 ?></td>
                                 <td class="py-3 px-4"><?= htmlspecialchars($o['customer']) ?></td>
-                                <td class="py-3 px-4">Himalayan Ghutno ke Dard Grice ki Fanki</td>
+                                <td class="py-3 px-4"><?= htmlspecialchars($o['products']) ?></td>
                                 <td class="py-3 px-4"><?= htmlspecialchars($o['quantities']) ?></td>
                                 <td class="py-3 px-4"><?= htmlspecialchars(date('Y-m-d', strtotime($o['date']))) ?></td>
                                 <td class="py-3 px-4">
@@ -339,13 +338,13 @@ try {
         return;
     }
 
-    html2pdf()
+html2pdf()
         .set({
-            margin: 10,
+            margin: 0,
             filename: 'invoice.pdf',
-            image: { type: 'png', quality: 0.98 },
-            html2canvas: { scale: 2, logging: false, letterRendering: true },
-            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            image: { type: 'jpeg', quality: 1 },
+            html2canvas: { scale: 2, logging: false, useCORS: true, scrollY: 0, letterRendering: true },
+            jsPDF: { unit: 'pt', format: 'a4', orientation: 'portrait' }
         })
         .from(el)
         .save();

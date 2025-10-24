@@ -15,7 +15,7 @@ $latest_products = $stmt->fetchAll();
 <section class="py-16 px-6">
     <div class="max-w-6xl mx-auto">
         <div class="flex items-center justify-center mb-6 space-x-3">
-            <h1 class="border-b-2 text-center text-3xl font-bold">LATEST COLLECTIONS</h1>
+            <h1 style="font-family: 'Montserrat';" class="border-b-2 text-center text-3xl font-bold">LATEST COLLECTIONS</h1>
         </div>
 
         <!-- Horizontal Scrollable Row -->
@@ -27,7 +27,7 @@ $latest_products = $stmt->fetchAll();
                 <img src="<?php echo htmlspecialchars($product['image']); ?>"
                      class="w-full h-40 object-contain mb-4 rounded-lg border-2 border-blue-800 p-1 bg-gray-50">
                 <hr class="w-full border-2 border-orange-400">
-                <p class="font-semibold text-center text-gray-800 text-sm md:text-base">
+                <p class="font-semibold text-center text-gray-800 text-sm md:text-base heading">
     <?php echo htmlspecialchars($product['name']); ?>
 </p>
 
@@ -49,6 +49,30 @@ $latest_products = $stmt->fetchAll();
 </section>
 
 <style>
+    /* General text */
+.heading {
+    font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Headings (h1–h6) */
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Main headings / titles (like your hero sections) */
+.main-title,
+.title {
+    font-family: 'Montserrat', sans-serif;
+}
+
     .no-scrollbar::-webkit-scrollbar {
         display: none;
     }

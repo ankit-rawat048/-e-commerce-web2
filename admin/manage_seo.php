@@ -103,9 +103,9 @@ try {
     </style>
 </head>
 <body class="bg-gray-100">
-    <div class="flex flex-col md:flex-row">
+    <div class="flex flex-col md:flex-row w-full">
         <?php include("sidebar.php"); ?>
-        <div class="flex-1 p-4 md:p-6">
+        <div class="flex-1 p-4 md:p-6 w-full lg:w-[75%]">
             <div class="flex justify-between items-center my-2">
                 <button id="menuButton" class="md:hidden text-2xl text-black">
                     <i class="fa-solid fa-bars"></i>
@@ -171,8 +171,8 @@ try {
             <!-- Products Table -->
             <div class="w-full mx-auto bg-white shadow-lg rounded-lg md:p-6 p-0 mt-6">
                 <h3 class="text-xl font-semibold pl-2 pt-2 mb-4">Products List</h3>
-                <div class="table-size overflow-y-auto overflow-x-auto max-h-[500px] bg-white rounded-lg shadow-lg">
-                    <table class="w-full md:min-w-[700px] lg:min-w-[900px] divide-y divide-gray-200">
+                <div class="table-size overflow-y-auto overflow-x-auto max-h-[500px] lg:max-h-[60vh] bg-white rounded-lg shadow-lg">
+                    <table class="w-full lg:min-w-[900px] divide-y divide-gray-200">
                         <thead class="bg-gray-800 text-white sticky top-0 z-10">
                             <tr>
                                 <th class="py-2 px-4">#</th>

@@ -141,9 +141,9 @@ try {
             width: 10%;
         }
 
-        ..table-data td {
-  display: flex;
-  align-items: center;
+        .table-data td {
+        display: flex;
+        align-items: center;
 }
 
 
@@ -152,7 +152,7 @@ try {
 </head>
 
 <body class="bg-gray-100 min-h-screen">
-    <div class="flex flex-col md:flex-row">
+    <div class="flex flex-col md:flex-row w-full">
         <?php
         if (file_exists('sidebar.php')) {
             include('sidebar.php');
@@ -160,7 +160,7 @@ try {
             echo '<p class="text-red-500">Error: sidebar.php not found</p>';
         }
         ?>
-        <div class="flex-1 p-4 md:p-6">
+        <div class="flex-1 p-4 md:p-6 w-full lg:w-[75%]">
             <div class="flex justify-between items-center my-2">
                 <button id="menuButton" class="md:hidden text-2xl text-black">
                     <i class="fa-solid fa-bars"></i>
@@ -176,56 +176,57 @@ try {
             }
             ?>
             <div class="mt-10">
-                <div class="flex flex-col sm:flex-row w-full items-start sm:items-center mb-6 gap-4">
-                    <div
-                        class="flex flex-col w-full justify-between items-stretch sm:items-center bg-gray-50 md:p-4 rounded-xl shadow-lg transition-all relative">
+<div class="flex w-full flex-col items-start gap-4 sm:flex-row sm:items-center">
+  <div class="relative flex w-full flex-col items-stretch justify-between rounded-xl transition-all sm:items-center md:p-4">
 
-                        <!-- Header Section -->
-                        <div class="flex flex-col sm:flex-row sm:items-center w-full gap-4 sm:relative bg-gray-50">
+    <!-- Header Section -->
+    <div class="flex w-full flex-col gap-4 sm:relative sm:flex-row sm:items-center">
 
-  <!-- Title & Buttons Section -->
-  <div class="flex sm:flex-row justify-between items-center w-full gap-3 sm:gap-4">
-    <!-- Title -->
-    <h3 class="proName text-lg sm:text-3xl font-bold text-gray-800 sm:text-left whitespace-normal leading-tight">
-      All Products
-    </h3>
+      <!-- Title & Buttons Section -->
+      <div class="flex w-full items-end justify-between gap-3 sm:gap-4">
+        <!-- Title -->
+        <h3 class="text-xl font-semibold">
+          All Products
+        </h3>
 
-    <!-- Buttons -->
-    <div class="flex sm:flex-row gap-2 w-full sm:w-auto">
-      <button
-        onclick="openAddProductModal()"
-        class="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white w-full sm:w-auto md:px-4 md:py-2 text-sm font-medium rounded-lg shadow-sm transition duration-200"
-      >
-        <i class="fa-solid fa-plus"></i>
-        <span>Add Product</span>
-      </button>
+        <!-- Buttons -->
+        <div class="flex w-full gap-2 sm:w-auto sm:flex-row">
+          <button
+            onclick="openAddProductModal()"
+            class="flex w-full items-center justify-center gap-2 rounded-lg bg-green-500 px-4 py-2 text-sm font-medium text-white shadow-sm transition duration-200 hover:bg-green-600 sm:w-auto"
+          >
+            <i class="fa-solid fa-plus"></i>
+            <span>Add Product</span>
+          </button>
 
-      <button
-        onclick="openAddCategoryModal()"
-        class="flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-600 text-white w-full sm:w-auto md:px-4 md:py-2 text-sm font-medium rounded-lg shadow-sm transition duration-200"
-      >
-        <i class="fa-solid fa-plus"></i>
-        <span>Add Category</span>
-      </button>
+          <button
+            onclick="openAddCategoryModal()"
+            class="flex w-full items-center justify-center gap-2 rounded-lg bg-blue-500 px-4 py-2 text-sm font-medium text-white shadow-sm transition duration-200 hover:bg-blue-600 sm:w-auto"
+          >
+            <i class="fa-solid fa-plus"></i>
+            <span>Add Category</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="mt-3 w-full lg:w-[40%] sm:absolute sm:left-1/2 sm:top-0 sm:mt-0 sm:-translate-x-1/2 sm:transform">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search by Name, Category, Company, Disease, or Description"
+          class="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm shadow-sm outline-none transition duration-200 focus:border-green-500 focus:ring-1 focus:ring-green-400 sm:text-base"
+        />
+      </div>
     </div>
-  </div>
 
-  <!-- Search Bar -->
-  <div class="w-full sm:w-1/2 mt-3 sm:mt-0 sm:absolute sm:left-1/2 sm:-translate-x-1/2 sm:transform">
-    <input
-      type="text"
-      id="searchInput"
-      placeholder="Search by Name, Category, Company, Disease, or Description"
-      class="w-full border border-gray-300 focus:border-green-500 focus:ring-1 focus:ring-green-400 rounded-lg px-4 py-2 text-sm sm:text-base outline-none transition duration-200 shadow-sm"
-    />
   </div>
 </div>
 
-                    </div>
-                </div>
+<hr class="border border-black mb-4">
 
-                <div class="table-size overflow-x-auto max-h-[450px] bg-white rounded-lg shadow-lg">
-    <table class="w-full min-w-[700px] lg:min-w-[900px] divide-y divide-gray-200" id="productTable">
+                <div class="table-size overflow-x-auto max-h-[600px] lg:max-h-[60vh] w-full bg-white rounded-lg shadow-lg">
+    <table class="w-full lg:min-w-[900px] divide-y divide-gray-200" id="productTable">
         <!-- Table Header -->
         <thead class="bg-gray-800 text-white sticky top-0 z-10">
             <tr>
@@ -572,29 +573,38 @@ try {
 
     <script src="samescript.js"></script>
     <script>
-        function openAddProductModal() {
-            const modal = document.getElementById("addProductModal");
-            modal.classList.add("active");
-            document.getElementById("addProductForm").reset();
-            document.getElementById("addCompany").value = "Shri Ganga Herbal";
-            document.getElementById("addVariants").innerHTML = `
-                <div class="variant-row">
-                    <input type="text" placeholder="Weight (e.g., 100g)" class="border rounded px-3 py-2">
-                    <input type="number" step="0.01" placeholder="Price" class="border rounded px-3 py-2">
-                    <button type="button" onclick="removeVariant(this)" class="bg-red-500 text-white px-2 py-1 rounded">X</button>
-                </div>
-            `;
-            window.addEventListener("click", function handler(e) {
-                if (e.target === modal) {
-                    closeAddProductModal();
-                    window.removeEventListener("click", handler);
-                }
-            });
-        }
+        // ✅ Open Modal
+function openAddProductModal() {
+  const modal = document.getElementById("addProductModal");
+  modal.classList.add("active");
 
-        function closeAddProductModal() {
-            document.getElementById("addProductModal").classList.remove("active");
-        }
+  // Reset form and default values
+  document.getElementById("addProductForm").reset();
+  document.getElementById("addCompany").value = "Shri Ganga Herbal";
+
+  // Add default variant row
+  document.getElementById("addVariants").innerHTML = `
+    <div class="variant-row">
+      <input type="text" placeholder="Weight (e.g., 100g)" class="border rounded px-3 py-2" required>
+      <input type="number" step="0.01" placeholder="Price" class="border rounded px-3 py-2" required>
+      <button type="button" onclick="removeVariant(this)" class="bg-red-500 text-white px-2 py-1 rounded">X</button>
+    </div>
+  `;
+}
+
+// ✅ Close Modal
+function closeAddProductModal() {
+  const modal = document.getElementById("addProductModal");
+  modal.classList.remove("active");
+}
+
+window.addEventListener("click", function (e) {
+  const modal = document.getElementById("addProductModal");
+  if (e.target === modal) {
+    closeAddProductModal();
+  }
+});
+
 
         function openAddCategoryModal() {
             const modal = document.getElementById("addCategoryModal");

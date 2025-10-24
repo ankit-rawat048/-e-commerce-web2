@@ -6,21 +6,20 @@
     /* width: auto; */
 }
 
-@media (max-width:500px){
+@media (max-width:500px) {
     #bgImg {
         height: auto;
     }
 }
 
-/* General text */
-body {
-    font-family: 'Poppins', sans-serif;
+
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Headings (h1–h6) */
-h1,
-h2,
-h3,
 h4,
 h5,
 h6 {
@@ -28,8 +27,10 @@ h6 {
 }
 
 /* Main headings / titles (like your hero sections) */
-.main-title,
-.title {
+.main-title {
     font-family: 'Montserrat', sans-serif;
 }
 
+.heading {
+    font-family: "Open Sans", sans-serif;
+}

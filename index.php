@@ -31,6 +31,10 @@ require_once 'include/conn.php';
     <!-- Best Sellers -->
     <?php include("indexsection/bestseller.php") ?>
 
+    <div class="bg-green-100 w-full my-4">
+        <img src="./images/herbal_page-0001.jpg" id="bgImg" class="w-full" alt="hero-img">
+</div>
+
     <!-- Categories Page -->
     <section class="py-16 bg-gray-200">
         <div class="max-w-6xl mx-auto lg:px-6">

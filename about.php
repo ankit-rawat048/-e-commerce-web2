@@ -15,7 +15,7 @@
     <?php include("include/header.php") ?>
 
     <!-- Main Content -->
-    <main class="max-w-6xl mx-auto py-12 space-y-12">
+    <main class="pt-12 space-y-12">
         <!-- Hero Section -->
     <div class="bg-green-100 w-full">
         <img src="./images/herbal_page-0001.jpg" id="bgImg" class="w-full" alt="hero-img">
@@ -23,7 +23,7 @@
 
         <!-- About Section -->
         <section class="text-center">
-            <p class="text-green-600 font-semibold mb-2">ABOUT US</p>
+            <p class="text-green-600 font-semibold mb-2 main-title">ABOUT US</p>
             <div class="w-16 h-1 bg-green-600 mx-auto mb-8"></div>
         </section>
 
@@ -43,7 +43,7 @@
                     laboriosam. Alias inventore nesciunt id libero veritatis aliquid debitis quaerat quo, nostrum
                     placeat!</p>
 
-                <h3 class="text-lg font-semibold text-green-600">Our Mission</h3>
+                <h3 class="text-lg font-semibold text-green-600 heading">Our Mission</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis laborum itaque magni asperiores,
                     dolore dolor quas autem laboriosam ea quam minima aperiam reprehenderit saepe quod veniam, fugiat
                     adipisci accusamus eius iure. Quis, optio magnam quia sed delectus libero molestias tempora.</p>
@@ -53,7 +53,7 @@
         <!-- Why Choose Us -->
         <section class="space-y-6">
             <div class="text-center mb-8">
-                <h3 class="text-2xl font-bold text-green-600">WHY CHOOSE US</h3>
+                <h3 class="text-2xl font-bold text-green-600 heading">WHY CHOOSE US</h3>
                 <div class="w-16 h-1 bg-green-600 mx-auto mt-2"></div>
             </div>
 

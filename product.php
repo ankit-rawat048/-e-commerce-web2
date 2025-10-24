@@ -90,21 +90,25 @@ $baseWeight = $variants[0]['weight'];
             <!-- Product Info -->
             <div class="flex-1 bg-[#efefef] p-[2rem] rounded-lg shadow">
                 <!-- Name & Category -->
-                <div class="py-2 mb-3 flex flex-row items-center justify-center lg:flex-col lg:items-start">
-                    <div>
-                        <h1 class="text-2xl sm:text-3xl font-bold"><?php echo htmlspecialchars($product['name']); ?></h1>
-                        <?php if (!empty($product['disease'])): ?>
-                            <div class="flex items-center">
-                                <p class="text-[16px] font-bold text-green-500 mr-[2px]">Helps With:</p>
-                                <p class="text-gray-800 font-bold text-[14px]"><?php echo htmlspecialchars($product['disease']); ?></p>
-                            </div>
-                        <?php endif; ?>
-                    </div>
-                    <div class="bg-gray-400 text-white font-bold uppercase px-4 py-2 rounded-lg shadow cursor-pointer lg:mt-2">
-                        <?php echo htmlspecialchars($product['category_name']); ?>
-                    </div>
-                </div>
+<div class="py-2 mb-3 flex flex-row items-center justify-center lg:flex-col lg:items-start">
+    <div>
+    <?php echo htmlspecialchars($product['name']); ?>
+        <?php if (!empty($product['disease'])): ?>
+                                <div class="mt-1">
+                                    <span class="text-[16px] font-bold text-green-500 mr-1 w-[6rem] leading-tight">Helps With:</span>
+                                    <span class="text-[14px] font-bold text-gray-800 leading-tight">
+                                        <?php echo htmlspecialchars($product['disease']); ?>
+                                    </span>
+                                </div>
+        <?php endif; ?>
+    </div>
 
+    <div class="ml-4 bg-gray-400 text-white font-bold uppercase px-4 py-2 rounded-lg shadow cursor-pointer lg:ml-0 lg:mt-2">
+        <?php echo htmlspecialchars($product['category_name']); ?>
+    </div>
+</div>
+
+                        
                 <!-- Price -->
                 <p id="priceDisplay" class="text-2xl sm:text-3xl font-semibold text-orange-600 mb-4 price-display" data-base-price="<?php echo $basePrice; ?>">
                     &#8377;<?php echo number_format($basePrice, 2); ?>
