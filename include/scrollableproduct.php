@@ -43,12 +43,12 @@ foreach ($categories as $category) {
                 <div class="gallery flex gap-6 p-4 transition-transform duration-600">
                     <?php foreach ($cat['products'] as $p): ?>
                         <a href="product.php?id=<?php echo htmlspecialchars($p['id']); ?>" 
-                           class="product-card bg-white border-2 border-green-800 p-4 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105 flex-shrink-0 min-w-[12rem] max-w-[14rem] lg:w-60">
+                           class="product-card max-w-[14rem] min-w-[14rem] flex flex-col justify-between transform rounded-lg border-2 border-green-800 bg-white p-4 shadow-lg transition hover:scale-105 hover:shadow-xl">
                             <img src="<?php echo htmlspecialchars($p['image']); ?>" 
                                  alt="<?php echo htmlspecialchars($p['name']); ?>" 
                                  class="w-full rounded-lg border-2 border-blue-800 h-40 object-contain mb-3">
                             <hr class="border-2 border-orange-400 my-4">
-                            <p class="font-semibold text-center text-gray-800 text-sm md:text-base">
+                            <p class="font-semibold text-center text-gray-800 text-sm md:text-base truncate">
                                 <?php echo htmlspecialchars($p['name']); ?>
                             </p>
                             <div class="flex items-center w-full h-[2.5rem] mt-auto gap-2">
